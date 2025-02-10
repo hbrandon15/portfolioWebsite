@@ -1,3 +1,7 @@
 .bg-black {
   background-color: #000 !important;
 }
+
+.navbar-nav .nav-link {
+	color: #fff !important;
+  }
