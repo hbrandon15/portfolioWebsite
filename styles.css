@@ -5,7 +5,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Satoshi", sans-serif;
+  /* font-family: 'Monterrant', sans-serif; */
+  font-family: "Antonio", sans-serif;
+  font-weight: 800;
 }
 
 body {
@@ -25,6 +27,9 @@ body {
   background-color: #000;
   color: #fff;
   padding: 10px 20px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
 }
 
 .navbar .container {
@@ -36,7 +41,7 @@ body {
 .navbar .navbar-brand a {
   color: #fff;
   text-decoration: none;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .navbar .navbar-links {
@@ -99,6 +104,11 @@ body {
   font-size: 100px;
   margin-bottom: 20px;
 }
+@media (max-width: 1024px) {
+  #header h1 {
+    font-size: 75px;
+  }
+}
 @media (max-width: 768px) {
   #header h1 {
     font-size: 50px;
@@ -109,11 +119,25 @@ body {
   font-size: 20px;
   margin: 5px 300px 0 300px;
   padding: 150px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+@media (max-width: 1024px) {
+  #description {
+    margin: 5px 100px;
+    padding: 50px;
+  }
 }
 @media (max-width: 768px) {
   #description {
     margin: 5px 20px;
     padding: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  #description {
+    margin: 5px 400px;
+    padding: 200px;
   }
 }
 
@@ -136,7 +160,7 @@ body {
   padding: 20px;
   width: 300px;
   text-align: left;
-  text-transform: lowercase;
+  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -160,6 +184,7 @@ body {
 .project-card a:hover {
   text-decoration: underline;
 }
+
 footer {
   background-color: #000;
   color: #fff;
@@ -218,7 +243,7 @@ footer {
 .about-content {
   max-width: 800px;
   text-align: left;
-  text-transform: lowercase;
+  
 }
 
 .about-content h2 {
