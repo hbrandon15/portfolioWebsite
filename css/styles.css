@@ -23,6 +23,13 @@ body {
   color: #fff;
 }
 
+.text-center {
+	  text-align: center;
+}
+.text-left {
+	  text-align: left;
+}
+
 .navbar {
   background-color: #000;
   color: #fff;
@@ -115,6 +122,9 @@ body {
   }
 }
 
+.section-padding {
+  padding: 150px 50px;
+}
 #description {
   font-size: 20px;
   margin: 5px 300px 0 300px;
