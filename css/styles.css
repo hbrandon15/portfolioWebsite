@@ -262,3 +262,24 @@ footer {
 .about-content ul li {
   margin-bottom: 10px;
 }
+
+/* Gallery */
+
+.gallery-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+  }
+  
+  .gallery-item {
+	flex: 1 1 calc(33.333% - 20px);
+	box-sizing: border-box;
+  }
+  
+  .gallery-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 5px;
+  }
