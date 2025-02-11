@@ -23,6 +23,13 @@ body {
   color: #fff;
 }
 
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
 .navbar {
   background-color: #000;
   color: #fff;
@@ -104,17 +111,10 @@ body {
   font-size: 100px;
   margin-bottom: 20px;
 }
-@media (max-width: 1024px) {
-  #header h1 {
-    font-size: 75px;
-  }
-}
-@media (max-width: 768px) {
-  #header h1 {
-    font-size: 50px;
-  }
-}
 
+.section-padding {
+  padding: 100px 50px;
+}
 #description {
   font-size: 20px;
   margin: 5px 300px 0 300px;
@@ -122,72 +122,15 @@ body {
   text-transform: uppercase;
   font-weight: 400;
 }
-@media (max-width: 1024px) {
-  #description {
-    margin: 5px 100px;
-    padding: 50px;
-  }
-}
-@media (max-width: 768px) {
-  #description {
-    margin: 5px 20px;
-    padding: 10px;
-  }
-}
-@media (min-width: 1440px) {
-  #description {
-    margin: 5px 400px;
-    padding: 200px;
-  }
-}
-
-#projects {
-  padding: 0 0 150px 0;
-}
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.project-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px;
-  text-align: left;
-  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.project-card p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.project-card a {
-  color: #1e90ff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
+#services ul{
+	  list-style: none;
+  padding: 0;
+	
 }
 
 footer {
   background-color: #000;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   color: #fff;
@@ -203,13 +146,6 @@ footer {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.inter-regular {
-  font-family: "Inter", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
@@ -246,7 +182,6 @@ footer {
 .about-content {
   max-width: 800px;
   text-align: left;
-  
 }
 
 .about-content h2 {
@@ -261,4 +196,130 @@ footer {
 
 .about-content ul li {
   margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  #description {
+    margin: 5px 100px;
+    padding: 50px;
+  }
+}
+@media (max-width: 768px) {
+  #description {
+    margin: 5px 20px;
+    padding: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  #description {
+    margin: 5px 400px;
+    padding: 200px;
+  }
+}
+@media (max-width: 1024px) {
+  #header h1 {
+    font-size: 75px;
+  }
+}
+@media (max-width: 768px) {
+  #header h1 {
+    font-size: 50px;
+  }
+}
+
+/* Projects */
+
+#projects {
+  padding: 0 0 150px 0;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project-card a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Photography */
+
+.services-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	padding: 20px;
+  }
+  
+  .service-card {
+	background-color: #1a1a1a;
+	border: 1px solid #333;
+	border-radius: 8px;
+	padding: 20px;
+	width: 300px;
+	text-align: left;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-card h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .service-card p {
+	font-size: 16px;
+	line-height: 1.6;
+	margin-bottom: 20px;
+  }
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
 }
