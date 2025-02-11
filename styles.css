@@ -118,6 +118,14 @@ body {
   }
 }
 
+#projects {
+	  padding: 0 0 150px 0;
+}
+
+.project-card{
+	text-transform: lowercase;
+}
+
 footer {
   background-color: #000;
   color: #fff;
