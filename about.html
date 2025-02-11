@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about - brandon hernandez</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!--  Google Fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black text-white">
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a href="index.html">brandon hernandez</a>
+          </div>
+          <div class="navbar-links">
+            <ul>
+              <li><a href="about.html">about</a></li>
+              <li><a href="projects.html">projects</a></li>
+              <li><a href="index.html#photography">photography</a></li>
+            </ul>
+          </div>
+          <div class="navbar-toggler">
+            <span>&#9776;</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="header" class="text-center">
+      <h1>about me</h1>
+    </section>
+    <section id="about" class="text-center">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="path/to/your-image.jpg" alt="brandon hernandez" />
+        </div>
+        <div class="about-content">
+          <p>
+            Brandon Hernandez is a software engineer and creative storyteller,
+            combining technical expertise with a passion for visual art to bring
+            ideas to life. With a background in software development and a keen
+            eye for design, solutions are created that are both functional and
+            aesthetically pleasing.
+          </p>
+          <h2>Skills</h2>
+          <ul>
+            <li>Programming Languages: C#, JavaScript, Python</li>
+            <li>Frameworks: .NET, Node.js, React</li>
+            <li>Tools: Git, Docker, SQL Server</li>
+            <li>Other: Agile Methodologies, Project Management</li>
+          </ul>
+          <h2>Experience</h2>
+          <p>
+            Various projects have been worked on, ranging from web applications
+            to embedded systems. Experience includes developing software
+            solutions for Harris County, leading capstone projects at the
+            University of Houston-Clear Lake, serving as a peer mentor to other
+            students, working as a research intern at NASA Johnson Space Center
+            in behavioral health science, and managing teams to deliver
+            high-quality products on time. Additionally, Brandon is a business
+            owner.
+          </p>
+          <h2>Education</h2>
+          <p>
+            Holding both a Bachelor's and a Master's degree in Computer
+            Engineering from the University of Houston-Clear Lake, the education
+            provided a comprehensive understanding of software engineering
+            principles and practices, as well as advanced knowledge in computer
+            engineering.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="text-center">
+      <p>&copy; 2025 brandon hernandez. all rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // JavaScript to toggle the navigation menu on small screens
+      document
+        .querySelector(".navbar-toggler")
+        .addEventListener("click", function () {
+          document.querySelector(".navbar-links").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>
