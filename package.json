@@ -1,6 +1,6 @@
 {
   "name": "portfoliowebsite",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "Welcome to my personal portfolio website! This site serves as a landing page for all my creative and professional work, including software projects, photography, and a bit about who I am.",
   "main": "index.js",
   "scripts": {
