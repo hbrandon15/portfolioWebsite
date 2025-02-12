@@ -176,11 +176,7 @@ footer {
   height: 350px; /* Adjusted size */
   object-fit: cover;
   margin-bottom: 20px;
-  transform: scale(1.2); /* Adjusted zoom */
-  padding-bottom: 50px; /* Add padding at the bottom */
-}
-.about-container {
-  padding: 50px 0;
+  padding-bottom: 20px; /* Add padding at the bottom */
 }
 
 .about-content {
