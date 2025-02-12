@@ -21,7 +21,7 @@ app.get("/photography", (req, res) => {
 
 // Fallback for other routes
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "public", "404.html"));
 });
 
 app.listen(port, () => {
