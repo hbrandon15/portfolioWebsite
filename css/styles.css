@@ -15,6 +15,16 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.body-links {
+	color: white; 
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.body-links:hover {
+	
+	text-decoration: underline;
+}
+
 .bg-black {
   background-color: #000;
 }
