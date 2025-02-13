@@ -13,6 +13,13 @@ document.addEventListener("contextmenu", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const mainContent = document.getElementById("main-content");
+
+  // Add a small delay before adding the fade-in class
+  setTimeout(() => {
+    mainContent.classList.add("fade-in");
+  }, 50);
+
   const links = document.querySelectorAll("a");
 
   links.forEach((link) => {
@@ -20,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       const href = this.getAttribute("href");
 
-      document.getElementById("main-content").classList.add("fade-out");
+      mainContent.classList.remove("fade-in");
+      mainContent.classList.add("fade-out");
 
       setTimeout(() => {
         window.location.href = href;

@@ -15,12 +15,17 @@ body {
   font-family: "Inter", sans-serif;
 }
 #main-content {
-  transition: opacity 0.5s ease-in-out;
-}
-
-#main-content.fade-out {
-  opacity: 0;
-}
+	transition: opacity 0.5s ease-in-out;
+	opacity: 0; /* Start with the content hidden */
+  }
+  
+  #main-content.fade-in {
+	opacity: 1; /* Fade in to full opacity */
+  }
+  
+  #main-content.fade-out {
+	opacity: 0; /* Fade out to hidden */
+  }
 
 .body-links {
   color: white;
