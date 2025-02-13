@@ -1,12 +1,16 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 8000;
+const PORT = process.env.PORT || 8000;
 
-// Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, "public")));
+// Serve static files from the root directory
+app.use(express.static(path.join(__dirname)));
 
-// Handle clean URLs
+// Define routes
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 app.get("/about", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "about.html"));
 });
@@ -19,11 +23,11 @@ app.get("/photography", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "photography.html"));
 });
 
-// Fallback for other routes
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "404.html"));
+// Handle 404 errors
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
