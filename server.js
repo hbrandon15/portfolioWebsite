@@ -6,21 +6,20 @@ const PORT = process.env.PORT || 8000;
 // Serve static files from the root directory
 app.use(express.static(path.join(__dirname)));
 
-// Define routes
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
-app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "about.html"));
-});
-
-app.get("/projects", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "projects.html"));
-});
-
-app.get("/photography", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "photography.html"));
+// Middleware to handle routes without file extensions
+app.use((req, res, next) => {
+  const filePath = path.join(__dirname, req.path + ".html");
+  if (req.path === "/" || req.path === "/index") {
+    res.sendFile(path.join(__dirname, "index.html"));
+  } else if (req.path === "/about") {
+    res.sendFile(path.join(__dirname, "about.html"));
+  } else if (req.path === "/projects") {
+    res.sendFile(path.join(__dirname, "projects.html"));
+  } else if (req.path === "/photography") {
+    res.sendFile(path.join(__dirname, "photography.html"));
+  } else {
+    next();
+  }
 });
 
 // Handle 404 errors
