@@ -14,15 +14,26 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
 }
+#main-content {
+	transition: opacity 0.5s ease-in-out;
+	opacity: 0; /* Start with the content hidden */
+  }
+  
+  #main-content.fade-in {
+	opacity: 1; /* Fade in to full opacity */
+  }
+  
+  #main-content.fade-out {
+	opacity: 0; /* Fade out to hidden */
+  }
 
 .body-links {
-	color: white; 
-	text-decoration: none;
-	text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .body-links:hover {
-	
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .bg-black {
@@ -137,8 +148,6 @@ body {
   padding: 0;
 }
 
-
-
 .footer {
   background-color: #000;
   font-family: "Inter", sans-serif;
@@ -147,12 +156,10 @@ body {
   color: #fff;
   padding: 20px;
   text-align: left;
- 
 }
 
 .footer-links {
   margin-bottom: 10px;
-  
 }
 
 .footer-links a {
@@ -165,7 +172,7 @@ body {
   text-decoration: underline;
 }
 .rights-reserved {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 /* styles for the navbar toggler icon */
