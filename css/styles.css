@@ -127,15 +127,31 @@ body {
   padding: 0;
 }
 
-footer {
+
+
+.footer {
   background-color: #000;
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   color: #fff;
-  padding: 20px 0;
-  text-align: center;
+  padding: 20px;
+  text-align: left;
   opacity: 0.5;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 /* styles for the navbar toggler icon */
