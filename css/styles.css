@@ -137,11 +137,12 @@ body {
   color: #fff;
   padding: 20px;
   text-align: left;
-  opacity: 0.5;
+ 
 }
 
 .footer-links {
   margin-bottom: 10px;
+  
 }
 
 .footer-links a {
@@ -152,6 +153,9 @@ body {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+.rights-reserved {
+	opacity: 0.5;
 }
 
 /* styles for the navbar toggler icon */
