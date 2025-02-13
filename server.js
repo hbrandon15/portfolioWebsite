@@ -1,7 +1,11 @@
 const express = require("express");
 const path = require("path");
+const helmet = require("helmet");
 const app = express();
 const PORT = process.env.PORT || 8000;
+
+// Use Helmet to set various HTTP headers for security
+app.use(helmet());
 
 // Serve static files from the root directory
 app.use(express.static(path.join(__dirname)));
