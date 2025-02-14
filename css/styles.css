@@ -351,7 +351,7 @@ h6 {
     align-items: center; /* Center the links */
     max-height: 0; /* Start with the links hidden */
     overflow: hidden; /* Prevent overflow */
-    transition: max-height 0.5s ease, opacity 0.5s ease; /* Add transition for smooth effect */
+    transition: max-height 0.7s ease, opacity 0.7s ease 0.1s; /* Add transition for smooth effect */
     opacity: 0; /* Start with the links hidden */
   }
 
