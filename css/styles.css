@@ -1,39 +1,7 @@
-/* Apply Satoshi font to all headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  /* font-family: 'Monterrant', sans-serif; */
-  font-family: "Antonio", sans-serif;
-  font-weight: 800;
-}
-
+/* General Styles */
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-}
-#main-content {
-	transition: opacity 0.5s ease-in-out;
-	opacity: 0; /* Start with the content hidden */
-  }
-  
-  #main-content.fade-in {
-	opacity: 1; /* Fade in to full opacity */
-  }
-  
-  #main-content.fade-out {
-	opacity: 0; /* Fade out to hidden */
-  }
-
-.body-links {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.body-links:hover {
-  text-decoration: underline;
 }
 
 .bg-black {
@@ -47,10 +15,47 @@ body {
 .text-center {
   text-align: center;
 }
+
 .text-left {
   text-align: left;
 }
 
+.body-links {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.body-links:hover {
+  text-decoration: underline;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 800;
+}
+
+/* Main Content */
+#main-content {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; /* Start with the content hidden */
+}
+
+#main-content.fade-in {
+  opacity: 1; /* Fade in to full opacity */
+}
+
+#main-content.fade-out {
+  opacity: 0; /* Fade out to hidden */
+}
+
+/* Navbar */
 .navbar {
   background-color: #000;
   color: #fff;
@@ -64,6 +69,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* Add this to position the navbar-links relative to the container */
 }
 
 .navbar .navbar-brand a {
@@ -97,32 +103,31 @@ body {
 .navbar .navbar-toggler {
   display: none;
   cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
 }
 
 .navbar .navbar-toggler span {
   font-size: 1.5em;
 }
 
-@media (max-width: 768px) {
-  .navbar .navbar-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
+.navbar .navbar-links.active {
+  display: flex;
+}
 
-  .navbar .navbar-links.active {
-    display: flex;
-  }
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
 
-  .navbar .navbar-toggler {
-    display: block;
-  }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-nav .nav-link {
   color: #fff !important;
 }
 
+/* Header */
 #header {
   padding: 150px 0;
   text-align: center;
@@ -133,9 +138,11 @@ body {
   margin-bottom: 20px;
 }
 
+/* Sections */
 .section-padding {
   padding: 100px 50px;
 }
+
 #description {
   font-size: 20px;
   margin: 5px 300px 0 300px;
@@ -143,11 +150,13 @@ body {
   text-transform: uppercase;
   font-weight: 400;
 }
+
 #services ul {
   list-style: none;
   padding: 0;
 }
 
+/* Footer */
 .footer {
   background-color: #000;
   font-family: "Inter", sans-serif;
@@ -171,35 +180,12 @@ body {
 .footer-links a:hover {
   text-decoration: underline;
 }
+
 .rights-reserved {
   opacity: 0.5;
 }
 
-/* styles for the navbar toggler icon */
-.navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Regular.woff2") format("woff2"),
-    url("/fonts/Satoshi-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Bold.woff2") format("woff2"),
-    url("/fonts/Satoshi-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
+/* About Section */
 .about-container {
   display: flex;
   flex-direction: column;
@@ -235,38 +221,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-  #description {
-    margin: 5px 100px;
-    padding: 50px;
-  }
-}
-@media (max-width: 768px) {
-  #description {
-    margin: 5px 20px;
-    padding: 10px;
-  }
-}
-@media (min-width: 1440px) {
-  #description {
-    margin: 5px 400px;
-    padding: 200px;
-  }
-}
-@media (max-width: 1024px) {
-  #header h1 {
-    font-size: 75px;
-  }
-}
-@media (max-width: 768px) {
-  #header h1 {
-    font-size: 50px;
-  }
-}
-
-/* Projects */
-
+/* Projects Section */
 #projects {
   padding: 0 0 150px 0;
 }
@@ -286,7 +241,6 @@ body {
   padding: 20px;
   width: 300px;
   text-align: left;
-
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -311,8 +265,7 @@ body {
   text-decoration: underline;
 }
 
-/* Photography */
-
+/* Photography Section */
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -342,6 +295,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Gallery Section */
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
@@ -360,4 +314,70 @@ body {
   height: auto;
   display: block;
   border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  #description {
+    margin: 5px 100px;
+    padding: 50px;
+  }
+
+  #header h1 {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  #description {
+    margin: 5px 20px;
+    padding: 10px;
+  }
+
+  #header h1 {
+    font-size: 50px;
+  }
+
+  .navbar .navbar-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%; /* Position the links directly under the toggler */
+    right: 0;
+    background-color: #000;
+    padding: 10px;
+    border: 1px solid #fff;
+    align-items: center; /* Center the links */
+    max-height: 0; /* Start with the links hidden */
+    overflow: hidden; /* Prevent overflow */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Add transition for smooth effect */
+    opacity: 0; /* Start with the links hidden */
+  }
+
+  .navbar .navbar-links.active {
+    max-height: 500px; /* Adjust this value as needed */
+    opacity: 1; /* Fade in the links */
+  }
+
+  .navbar .navbar-links ul {
+    flex-direction: column;
+    padding: 0;
+    align-items: center; /* Center the links */
+  }
+
+  .navbar .navbar-links ul li {
+    margin: 10px 0;
+  }
+
+  .navbar .navbar-toggler {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  #description {
+    margin: 5px 400px;
+    padding: 200px;
+  }
 }
