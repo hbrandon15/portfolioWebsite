@@ -69,6 +69,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* Add this to position the navbar-links relative to the container */
 }
 
 .navbar .navbar-brand a {
@@ -341,14 +342,29 @@ h6 {
     display: none;
     flex-direction: column;
     width: 100%;
+    position: absolute;
+    top: 100%; /* Position the links directly under the toggler */
+    right: 0;
+    background-color: #000;
+    padding: 10px;
+    border: 1px solid #fff;
   }
 
-  .navbar .navbar-links.active {
-    display: flex;
+  .navbar .navbar-links ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar .navbar-links ul li {
+    margin: 10px 0;
   }
 
   .navbar .navbar-toggler {
     display: block;
+  }
+
+  .navbar .navbar-links.active {
+    display: flex;
   }
 }
 
