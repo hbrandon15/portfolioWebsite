@@ -339,7 +339,7 @@ h6 {
   }
 
   .navbar .navbar-links {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
     position: absolute;
@@ -349,6 +349,15 @@ h6 {
     padding: 10px;
     border: 1px solid #fff;
     align-items: center; /* Center the links */
+    max-height: 0; /* Start with the links hidden */
+    overflow: hidden; /* Prevent overflow */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Add transition for smooth effect */
+    opacity: 0; /* Start with the links hidden */
+  }
+
+  .navbar .navbar-links.active {
+    max-height: 500px; /* Adjust this value as needed */
+    opacity: 1; /* Fade in the links */
   }
 
   .navbar .navbar-links ul {
@@ -363,10 +372,6 @@ h6 {
 
   .navbar .navbar-toggler {
     display: block;
-  }
-
-  .navbar .navbar-links.active {
-    display: flex;
   }
 }
 
