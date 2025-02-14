@@ -347,6 +347,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  padding-bottom: 100px;
 }
 
 .gallery-item {
