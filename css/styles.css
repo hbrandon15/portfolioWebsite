@@ -180,6 +180,12 @@ h6 {
 .footer-links a:hover {
   text-decoration: underline;
 }
+.footer .created-by {
+	margin-top: 10px;
+	font-size: 14px;
+	opacity: 0.7;
+	text-align: center;
+  }
 
 .rights-reserved {
   opacity: 0.5;
