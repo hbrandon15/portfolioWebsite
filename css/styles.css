@@ -55,6 +55,11 @@ h6 {
   opacity: 0; /* Fade out to hidden */
 }
 
+#about-me {
+  margin: 5px 300px;
+  padding: 150px;
+}
+
 /* Initial hidden state */
 .hidden {
   opacity: 0;
@@ -376,7 +381,7 @@ h6 {
   /* Styles for mobile devices */
 
   #description,
-  #photography-introduction {
+  #photography-introduction, #about-me {
     margin: 5px 20px;
     padding: 10px;
   }
@@ -426,7 +431,7 @@ h6 {
 @media (min-width: 768px) and (max-width: 1023px) {
   /* Styles for tablets */
   #description,
-  #photography-introduction {
+  #photography-introduction, #about-me {
     margin: 5px 100px;
     padding: 50px;
   }
