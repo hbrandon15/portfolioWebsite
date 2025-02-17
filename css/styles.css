@@ -222,6 +222,8 @@ h6 {
 .about-content {
   max-width: 800px;
   text-align: left;
+  line-height: 1.6;
+  padding: 20px;
 }
 
 .about-content h2 {
