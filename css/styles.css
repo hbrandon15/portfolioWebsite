@@ -181,11 +181,11 @@ h6 {
   text-decoration: underline;
 }
 .footer .created-by {
-	margin-top: 10px;
-	font-size: 14px;
-	opacity: 0.7;
-	text-align: center;
-  }
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+  text-align: center;
+}
 
 .rights-reserved {
   opacity: 0.5;
@@ -300,6 +300,32 @@ h6 {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+.logo {
+  max-width: 200px; /* Adjust the size as needed */
+  margin-top: 20px; /* Add some space above the logo */
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #1a1a1a; /* Match the background color of service cards */
+	border: 1px solid #333; /* Match the border color of service cards */
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn:hover {
+	background-color: #333; /* Darken the background color on hover */
+	color: #fff; /* Ensure the text color remains white */
+  }
 
 /* Gallery Section */
 .gallery-container {
