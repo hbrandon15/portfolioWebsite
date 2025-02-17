@@ -1,18 +1,34 @@
 // JavaScript to toggle the navigation menu on small screens
-document
-  .querySelector(".navbar-toggler")
-  .addEventListener("click", function () {
-    document.querySelector(".navbar-links").classList.toggle("active");
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navbarLinks = document.querySelector(".navbar-links");
+
+  navbarToggler.addEventListener("click", function () {
+    navbarLinks.classList.toggle("active");
   });
 
-// JavaScript to disable right-click on images
-document.addEventListener("contextmenu", function (e) {
-  if (e.target.tagName === "IMG") {
-    e.preventDefault();
-  }
-});
+  // Close the menu when clicking outside
+  document.addEventListener("click", function (event) {
+    if (
+      !navbarToggler.contains(event.target) &&
+      !navbarLinks.contains(event.target)
+    ) {
+      navbarLinks.classList.remove("active");
+    }
+  });
 
-document.addEventListener("DOMContentLoaded", function () {
+  // Close the menu when scrolling
+  window.addEventListener("scroll", function () {
+    navbarLinks.classList.remove("active");
+  });
+
+  // JavaScript to disable right-click on images
+  document.addEventListener("contextmenu", function (e) {
+    if (e.target.tagName === "IMG") {
+      e.preventDefault();
+    }
+  });
+
   const mainContent = document.getElementById("main-content");
 
   // Add a small delay before adding the fade-in class
