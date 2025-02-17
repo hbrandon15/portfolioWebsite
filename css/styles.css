@@ -311,20 +311,21 @@ h6 {
 }
 
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #1a1a1a; /* Match the background color of service cards */
+	border: 1px solid #333; /* Match the border color of service cards */
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn:hover {
+	background-color: #333; /* Darken the background color on hover */
+	color: #fff; /* Ensure the text color remains white */
+  }
 
 /* Gallery Section */
 .gallery-container {
