@@ -307,19 +307,21 @@ h6 {
 
 .button-container {
   text-align: center;
-  margin-top: 20px;
+  margin: 30px;
 }
 
 .btn {
 	display: inline-block;
 	padding: 10px 20px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #fff;
 	background-color: #1a1a1a; /* Match the background color of service cards */
 	border: 1px solid #333; /* Match the border color of service cards */
 	border-radius: 5px;
 	text-decoration: none;
 	transition: background-color 0.3s ease, color 0.3s ease;
+	text-transform: uppercase;
+	
   }
   
   .btn:hover {
