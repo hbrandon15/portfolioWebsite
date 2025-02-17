@@ -437,6 +437,11 @@ h6 {
 /* Small Desktops/Laptops (1024px to 1439px) */
 @media (min-width: 1024px) and (max-width: 1439px) {
   /* Styles for small desktops/laptops */
+
+  #photography-introduction {
+	margin: 5px 10px;
+	padding: 100px;
+  }
 }
 
 /* Large Desktops (1440px and above) */
