@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function() {
 	// Fade in the header first
-	// const header = document.getElementById("header");
-	// header.classList.add("fade-in");
+	const header = document.getElementById("header");
+	header.classList.add("fade-in");
   
 	// Fade in the rest of the content after a delay
 	setTimeout(() => {
@@ -64,5 +64,5 @@ document.addEventListener("DOMContentLoaded", function() {
 	  elementsToFadeIn.forEach(element => {
 		element.classList.add("fade-in");
 	  });
-	}, 2000); // Adjust the delay as needed
+	}, 1500); // Adjust the delay as needed
   });
