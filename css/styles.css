@@ -55,6 +55,11 @@ h6 {
   opacity: 0; /* Fade out to hidden */
 }
 
+#about-me {
+  margin: 5px 300px;
+  padding: 150px;
+}
+
 /* Initial hidden state */
 .hidden {
   opacity: 0;
@@ -222,6 +227,8 @@ h6 {
 .about-content {
   max-width: 800px;
   text-align: left;
+  line-height: 1.6;
+  padding: 20px;
 }
 
 .about-content h2 {
@@ -283,6 +290,13 @@ h6 {
 }
 
 /* Photography Section */
+
+#photography-introduction {
+  margin: 5px 300px;
+  padding: 150px;
+  text-align: center;
+  line-height: 1.6;
+}
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -361,19 +375,13 @@ h6 {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
-  #description {
-    margin: 5px 100px;
-    padding: 50px;
-  }
 
-  #header h1 {
-    font-size: 75px;
-  }
-}
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+  /* Styles for mobile devices */
 
-@media (max-width: 768px) {
-  #description {
+  #description,
+  #photography-introduction, #about-me {
     margin: 5px 20px;
     padding: 10px;
   }
@@ -419,9 +427,36 @@ h6 {
   }
 }
 
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets */
+  #description,
+  #photography-introduction, #about-me {
+    margin: 5px 100px;
+    padding: 50px;
+  }
+
+  #header h1 {
+    font-size: 75px;
+  }
+}
+
+/* Small Desktops/Laptops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /* Styles for small desktops/laptops */
+
+  #photography-introduction, #description {
+	margin: 5px 10px;
+	padding: 100px;
+  }
+}
+
+/* Large Desktops (1440px and above) */
 @media (min-width: 1440px) {
+  /* Styles for large desktops */
   #description {
     margin: 5px 400px;
     padding: 200px;
   }
 }
+
