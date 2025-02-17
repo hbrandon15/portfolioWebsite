@@ -300,6 +300,10 @@ h6 {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+.logo {
+	max-width: 200px; /* Adjust the size as needed */
+	margin-top: 20px; /* Add some space above the logo */
+  }
 
 /* Gallery Section */
 .gallery-container {
