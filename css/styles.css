@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
 }
 
 .bg-black {
@@ -31,7 +31,7 @@ body {
 }
 
 /* Typography */
-h1 {
+/* h1 {
   font-family: "Antonio", sans-serif;
   font-weight: 700;
 }
@@ -51,7 +51,7 @@ h5,
 h6 {
   font-family: "Antonio", sans-serif;
   font-weight: 400;
-}
+} */
 
 /* Main Content */
 #main-content {
@@ -162,11 +162,6 @@ h6 {
   text-align: center;
 }
 
-#header h1 {
-  font-size: 100px;
-  margin-bottom: 20px;
-}
-
 /* Sections */
 .section-padding {
   padding: 100px 50px;
@@ -183,6 +178,12 @@ h6 {
 #services ul {
   list-style: none;
   padding: 0;
+}
+
+#header h1 {
+	font-family: "Oswald", sans-serif !important;
+  font-weight: 700;
+  font-size: 100px;
 }
 
 /* Footer */
@@ -386,6 +387,9 @@ h6 {
   display: block;
   border-radius: 5px;
 }
+
+
+
 
 /* Media Queries */
 
