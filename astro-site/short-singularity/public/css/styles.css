@@ -301,8 +301,8 @@ h6 {
 }
 
 .service-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
+  background-color: #fff;
+  border: 1px solid #111;
   border-radius: 8px;
   padding: 20px;
   width: 300px;
@@ -319,6 +319,9 @@ h6 {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+.service-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 .logo {
   max-width: 200px; /* Adjust the size as needed */
