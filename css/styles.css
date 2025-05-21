@@ -31,14 +31,26 @@ body {
 }
 
 /* Typography */
-h1,
-h2,
-h3,
+h1 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 500;
+}
+
 h4,
 h5,
 h6 {
   font-family: "Antonio", sans-serif;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 /* Main Content */
@@ -112,6 +124,7 @@ h6 {
 }
 
 .navbar .navbar-links ul li a {
+  font-family: "Oswald", sans-serif;
   color: #fff;
   text-decoration: none;
 }
@@ -381,7 +394,8 @@ h6 {
   /* Styles for mobile devices */
 
   #description,
-  #photography-introduction, #about-me {
+  #photography-introduction,
+  #about-me {
     margin: 5px 20px;
     padding: 10px;
   }
@@ -431,7 +445,8 @@ h6 {
 @media (min-width: 768px) and (max-width: 1023px) {
   /* Styles for tablets */
   #description,
-  #photography-introduction, #about-me {
+  #photography-introduction,
+  #about-me {
     margin: 5px 100px;
     padding: 50px;
   }
@@ -445,9 +460,10 @@ h6 {
 @media (min-width: 1024px) and (max-width: 1439px) {
   /* Styles for small desktops/laptops */
 
-  #photography-introduction, #description {
-	margin: 5px 10px;
-	padding: 100px;
+  #photography-introduction,
+  #description {
+    margin: 5px 10px;
+    padding: 100px;
   }
 }
 
@@ -459,4 +475,3 @@ h6 {
     padding: 200px;
   }
 }
-
