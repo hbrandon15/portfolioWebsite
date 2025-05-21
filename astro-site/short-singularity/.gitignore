@@ -1,5 +1,9 @@
 # .gitignore
 
+# Build output
+dist/
+
+
 # macOS
 .DS_Store
 
