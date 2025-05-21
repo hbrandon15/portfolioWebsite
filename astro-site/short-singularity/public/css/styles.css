@@ -11,6 +11,9 @@ body {
 .text-white {
   color: #fff;
 }
+.text-black {
+  color: #000;
+}
 
 .text-center {
   text-align: center;
@@ -53,34 +56,9 @@ h6 {
   font-weight: 400;
 }
 
-/* Main Content */
-#main-content {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0; /* Start with the content hidden */
-}
-
-#main-content.fade-in {
-  opacity: 1; /* Fade in to full opacity */
-}
-
-#main-content.fade-out {
-  opacity: 0; /* Fade out to hidden */
-}
-
 #about-me {
   margin: 5px 300px;
   padding: 150px;
-}
-
-/* Initial hidden state */
-.hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Fade-in effect */
-.fade-in {
-  opacity: 1;
 }
 
 /* Navbar */
@@ -129,27 +107,13 @@ h6 {
   text-decoration: none;
 }
 
-.navbar .navbar-toggler {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  padding: 10px;
-}
-
-.navbar .navbar-toggler span {
-  font-size: 1.5em;
-}
-
-.navbar .navbar-links.active {
-  display: flex;
-}
-
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: inherit;
 }
 
 .navbar-nav .nav-link {
@@ -174,6 +138,9 @@ h6 {
   text-transform: uppercase;
   font-weight: 400;
 }
+.description-black {
+  color: #000;
+}
 
 #services ul {
   list-style: none;
@@ -181,7 +148,7 @@ h6 {
 }
 
 #header h1 {
-	font-family: "Oswald", sans-serif !important;
+  font-family: "Oswald", sans-serif !important;
   font-weight: 700;
   font-size: 100px;
 }
@@ -273,13 +240,13 @@ h6 {
 }
 
 .project-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #111;
+  border-radius: 12px;
+  padding: 2rem;
   width: 300px;
   text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .project-card h2 {
@@ -294,13 +261,13 @@ h6 {
 }
 
 .project-card a {
-  color: #1e90ff;
-  text-decoration: none;
+  color: #0074d9;
+  text-decoration: underline;
   font-weight: bold;
 }
 
-.project-card a:hover {
-  text-decoration: underline;
+.project-card:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Photography Section */
@@ -320,8 +287,8 @@ h6 {
 }
 
 .service-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
+  background-color: #fff;
+  border: 1px solid #111;
   border-radius: 8px;
   padding: 20px;
   width: 300px;
@@ -338,6 +305,9 @@ h6 {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+.service-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 .logo {
   max-width: 200px; /* Adjust the size as needed */
@@ -388,9 +358,6 @@ h6 {
   border-radius: 5px;
 }
 
-
-
-
 /* Media Queries */
 
 /* Mobile Devices (up to 767px) */
@@ -408,41 +375,6 @@ h6 {
     font-size: 50px;
   }
 
-  .navbar .navbar-links {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 40px); /* Adjust width to fit within the viewport */
-    position: absolute;
-    top: 100%; /* Position the links directly under the toggler */
-    right: 10px; /* Add some margin to the right */
-    background-color: #000;
-    padding: 10px;
-    border: 1px solid #fff;
-    align-items: center; /* Center the links */
-    max-height: 0; /* Start with the links hidden */
-    overflow: hidden; /* Prevent overflow */
-    transition: max-height 0.7s ease, opacity 0.7s ease 0.1s; /* Add transition for smooth effect */
-    opacity: 0; /* Start with the links hidden */
-  }
-
-  .navbar .navbar-links.active {
-    max-height: 500px; /* Adjust this value as needed */
-    opacity: 1; /* Fade in the links */
-  }
-
-  .navbar .navbar-links ul {
-    flex-direction: column;
-    padding: 0;
-    align-items: center; /* Center the links */
-  }
-
-  .navbar .navbar-links ul li {
-    margin: 10px 0;
-  }
-
-  .navbar .navbar-toggler {
-    display: block;
-  }
 }
 
 /* Tablets (768px to 1023px) */
