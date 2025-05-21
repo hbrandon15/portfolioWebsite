@@ -107,27 +107,13 @@ h6 {
   text-decoration: none;
 }
 
-.navbar .navbar-toggler {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  padding: 10px;
-}
-
-.navbar .navbar-toggler span {
-  font-size: 1.5em;
-}
-
-.navbar .navbar-links.active {
-  display: flex;
-}
-
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: inherit;
 }
 
 .navbar-nav .nav-link {
@@ -389,41 +375,6 @@ h6 {
     font-size: 50px;
   }
 
-  .navbar .navbar-links {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 40px); /* Adjust width to fit within the viewport */
-    position: absolute;
-    top: 100%; /* Position the links directly under the toggler */
-    right: 10px; /* Add some margin to the right */
-    background-color: #000;
-    padding: 10px;
-    border: 1px solid #fff;
-    align-items: center; /* Center the links */
-    max-height: 0; /* Start with the links hidden */
-    overflow: hidden; /* Prevent overflow */
-    transition: max-height 0.7s ease, opacity 0.7s ease 0.1s; /* Add transition for smooth effect */
-    opacity: 0; /* Start with the links hidden */
-  }
-
-  .navbar .navbar-links.active {
-    max-height: 500px; /* Adjust this value as needed */
-    opacity: 1; /* Fade in the links */
-  }
-
-  .navbar .navbar-links ul {
-    flex-direction: column;
-    padding: 0;
-    align-items: center; /* Center the links */
-  }
-
-  .navbar .navbar-links ul li {
-    margin: 10px 0;
-  }
-
-  .navbar .navbar-toggler {
-    display: block;
-  }
 }
 
 /* Tablets (768px to 1023px) */
