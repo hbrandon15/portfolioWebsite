@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
       // Only intercept links that do NOT have target="_blank"
-      if (this.target === "_blank") return;
+      if (this.target === "_blank" || event.defaultPrevented) return;
 
       event.preventDefault();
       const href = this.getAttribute("href");
@@ -72,4 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 1500); // Adjust the delay as needed
 });
 
+function showMainContent() {
+  const mainContent = document.getElementById("main-content");
+  if (mainContent) {
+    mainContent.classList.remove("fade-out");
+    mainContent.classList.add("fade-in");
+  }
+}
 
+document.addEventListener("DOMContentLoaded", showMainContent);
+window.addEventListener("pageshow", showMainContent);
