@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
+      // Only intercept links that do NOT have target="_blank"
+      if (this.target === "_blank") return;
+
       event.preventDefault();
       const href = this.getAttribute("href");
 
@@ -53,16 +56,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-	// Fade in the header first
-	const header = document.getElementById("header");
-	header.classList.add("fade-in");
-  
-	// Fade in the rest of the content after a delay
-	setTimeout(() => {
-	  const elementsToFadeIn = document.querySelectorAll(".navbar, #description, #about-me, .footer");
-	  elementsToFadeIn.forEach(element => {
-		element.classList.add("fade-in");
-	  });
-	}, 1500); // Adjust the delay as needed
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  // Fade in the header first
+  const header = document.getElementById("header");
+  header.classList.add("fade-in");
+
+  // Fade in the rest of the content after a delay
+  setTimeout(() => {
+    const elementsToFadeIn = document.querySelectorAll(
+      ".navbar, #description, #about-me, .footer"
+    );
+    elementsToFadeIn.forEach((element) => {
+      element.classList.add("fade-in");
+    });
+  }, 1500); // Adjust the delay as needed
+});
