@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+ 
 }
 
 .bg-black {
@@ -10,6 +11,9 @@ body {
 
 .text-white {
   color: #fff;
+}
+.text-black {
+  color: #000;
 }
 
 .text-center {
@@ -53,35 +57,11 @@ h6 {
   font-weight: 400;
 }
 
-/* Main Content */
-#main-content {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0; /* Start with the content hidden */
-}
-
-#main-content.fade-in {
-  opacity: 1; /* Fade in to full opacity */
-}
-
-#main-content.fade-out {
-  opacity: 0; /* Fade out to hidden */
-}
-
 #about-me {
   margin: 5px 300px;
   padding: 150px;
 }
 
-/* Initial hidden state */
-.hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Fade-in effect */
-.fade-in {
-  opacity: 1;
-}
 
 /* Navbar */
 .navbar {
@@ -173,6 +153,9 @@ h6 {
   padding: 150px;
   text-transform: uppercase;
   font-weight: 400;
+}
+.description-black{
+	  color: #000;
 }
 
 #services ul {
