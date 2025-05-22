@@ -1,6 +1,6 @@
 # Brandon Hernandez Portfolio
 
-A personal portfolio website built with [Astro](https://astro.build), featuring responsive design, custom components, and automated deployment to GitHub Pages with support for a custom domain.
+A personal and professional portfolio website built with [Astro](https://astro.build), featuring responsive design, custom components, and automated deployment to GitHub Pages with support for a custom domain. This site showcases both my software development work and my photography business.
 
 ## 🚀 Features
 
@@ -8,6 +8,7 @@ A personal portfolio website built with [Astro](https://astro.build), featuring 
 - Responsive design and custom layouts
 - Automated deployment via GitHub Actions
 - Supports custom domains (e.g., [bhdz.dev](https://bhdz.dev))
+- Showcases both professional projects and photography business
 - Easy to update and maintain
 
 ## 🗂️ Project Structure
@@ -24,7 +25,8 @@ A personal portfolio website built with [Astro](https://astro.build), featuring 
 │   └── pages/
 │       ├── index.astro
 │       ├── about.astro
-│       └── projects.astro
+│       ├── projects.astro
+│       └── photography.astro
 ├── astro.config.mjs
 └── package.json
 ```
