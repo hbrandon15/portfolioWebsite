@@ -78,6 +78,7 @@ h6 {
   position: relative; /* Add this to position the navbar-links relative to the container */
 }
 
+
 .navbar .navbar-brand a {
   color: #fff;
   text-decoration: none;
