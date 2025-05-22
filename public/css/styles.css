@@ -227,6 +227,22 @@ h6 {
   margin-bottom: 10px;
 }
 
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.skills-badges span {
+  background: #222;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.95em;
+  display: inline-block;
+}
+
 /* Projects Section */
 #projects {
   padding: 0 0 150px 0;
