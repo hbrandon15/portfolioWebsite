@@ -1,48 +1,66 @@
-# Astro Starter Kit: Basics
+# Brandon Hernandez Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+A personal portfolio website built with [Astro](https://astro.build), featuring responsive design, custom components, and automated deployment to GitHub Pages with support for a custom domain.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Built with Astro for fast, modern static site generation
+- Responsive design and custom layouts
+- Automated deployment via GitHub Actions
+- Supports custom domains (e.g., [bhdz.dev](https://bhdz.dev))
+- Easy to update and maintain
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 🗂️ Project Structure
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── css/
+│       └── styles.css
 ├── src/
+│   ├── components/
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
+│       ├── index.astro
+│       ├── about.astro
+│       └── projects.astro
+├── astro.config.mjs
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧑‍💻 Local Development
 
-## 🧞 Commands
+Install dependencies and start the local dev server:
 
-All commands are run from the root of the project, from a terminal:
+```sh
+npm install
+npm run dev
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Visit [localhost:4321](http://localhost:4321) to view the site locally.
 
-## 👀 Want to learn more?
+## 🏗️ Building & Deploying
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To build the site for production:
+
+```sh
+npm run build
+```
+
+The output will be in the `dist/` folder.
+
+Deployment is automated via GitHub Actions. Every push to `main` triggers a build and deploy to GitHub Pages.
+
+## 🌐 Custom Domain
+
+To use a custom domain, add a `CNAME` file in the `public/` folder with your domain name (e.g., `bhdz.dev`).
+
+## 📚 Learn More
+
+- [Astro Documentation](https://docs.astro.build)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
+
+---
+
+**Made with Astro 🚀 by Brandon Hernandez**
