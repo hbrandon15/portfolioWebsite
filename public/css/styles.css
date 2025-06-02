@@ -61,7 +61,6 @@ h6 {
 }
 
 #about-me {
-  margin: 5px 300px;
   padding: 150px;
 }
 
@@ -514,8 +513,5 @@ h6 {
 /* Large Desktops (1440px and above) */
 @media (min-width: 1440px) {
   /* Styles for large desktops */
-  #description {
-    margin: 5px 400px;
-    padding: 200px;
-  }
+
 }
