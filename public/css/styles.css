@@ -291,8 +291,9 @@ h6 {
 /* Photography Section */
 
 #photography-introduction {
-  margin: 5px 300px;
-  padding: 150px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  max-width: 800px;
   text-align: center;
   line-height: 1.6;
 }
