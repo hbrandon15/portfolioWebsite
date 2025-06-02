@@ -318,7 +318,7 @@ h6 {
   object-fit: cover;
   /* object-position: center center;   Default: center */
   /* object-position: top center;   // Focus top */
-  object-position: 50% 60%;
+  object-position: 50% 41%;
   z-index: 1;
 }
 
