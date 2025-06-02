@@ -1,4 +1,8 @@
 /* General Styles */
+/* Enables smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -427,7 +431,7 @@ h6 {
 .gallery-item {
   flex: 1 1 calc(33.333% - 20px);
   box-sizing: border-box;
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -437,7 +441,6 @@ h6 {
   height: auto;
   display: block;
   border-radius: 5px;
-  
 }
 
 /* Media Queries */
