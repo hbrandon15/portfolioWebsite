@@ -1,86 +1,170 @@
 ---
-
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
-
-
- <div id="main-content">
-      <section id="header" class="text-center">
+  <div id="main-content">
+    <section id="hero" class="hero-section">
+      <img src="/images/ric-2.jpg" alt="Sample Work" class="hero-bg" />
+      <div class="hero-overlay">
+        <img src="/images/BHP WHITE LOGO 2.png" alt="Brandon Hernandez Photography Logo" class="hero-logo" />
         <h1>Photography</h1>
-        <img
-          src="/images/BHP WHITE LOGO 2.png"
-          alt="Brandon Hernandez Logo"
-          class="logo"
-        />
-      </section>
-      <section id="photography-introduction" class="section-padding">
-        <p>
-          Brandon Hernandez is a freelance photographer and filmmaker based in
-          Houston, TX. His goal is to create timeless visuals that capture your
-          unique story, whether through professional photography or videography.
-          From intimate events to grand celebrations or simple photoshoots, he
-          is here to bring your vision to life and preserve those precious
-          moments.
-        </p>
-      </section>
-      <section id="services" class="section-padding text-center">
-        <h2>Services</h2>
-        <div class="services-container">
-          <div class="service-card">
-            <h3>Photography</h3>
-            <p>
-              Professional photography services for events, portraits, and more.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>Videography</h3>
-            <p>
-              High-quality videography services to capture your special moments.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>Film Photography</h3>
-            <p>Classic film photography for a timeless look and feel.</p>
-          </div>
-          <div class="service-card">
-            <h3>Film Scanning</h3>
-            <p>
-              Professional film scanning services to digitize your memories.
-            </p>
-          </div>
+        <p>Capturing Timeless Moments in Houston, TX</p>
+        <a href="#gallery" class="btn btn-light">View Gallery</a>
+      </div>
+    </section>
+    <section id="photography-introduction" class="section-padding">
+      <p>
+        Brandon Hernandez is a freelance photographer and filmmaker based in
+        Houston, TX. His goal is to create timeless visuals that capture your
+        unique story, whether through professional photography or videography.
+        From intimate events to grand celebrations or simple photoshoots, he
+        is here to bring your vision to life and preserve those precious
+        moments.
+      </p>
+    </section>
+    <section id="services" class="section-padding text-center">
+      <h2>Services</h2>
+      <div class="services-container">
+        <div class="service-card">
+          <i class="fa-solid fa-camera-retro service-icon"></i>
+          <h3>Photography</h3>
+          <p>
+            Professional photography services for events, portraits, and more.
+          </p>
         </div>
-      </section>
-      <section id="gallery" class="text-center">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-          <div class="gallery-item">
-            <img src="/images/copyright-00057-min.jpg" alt="Photo 1" />
-          </div>
-          <div class="gallery-item">
-            <img src="/images/copyright-00948-min.jpg" alt="Photo 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="/images/copyright-01082-min.jpg" alt="Photo 3" />
-          </div>
-          <div class="gallery-item">
-            <img src="/images/copyright-03696-min.jpg" alt="Photo 4" />
-          </div>
-          <div class="gallery-item">
-            <img src="/images/copyright-08997-2-min.jpg" alt="Photo 5" />
-          </div>
-          <div class="gallery-item">
-            <img src="/images/Main_copyright--89-min.jpg" alt="Photo 6" />
-          </div>
+        <div class="service-card">
+          <i class="fa-solid fa-video service-icon"></i>
+          <h3>Videography</h3>
+          <p>
+            High-quality videography services to capture your special moments.
+          </p>
         </div>
-        <div class="button-container">
-          <a
-            href="https://brandonhernandezphotography.hbportal.co/public/inquiry"
-            class="btn"
-            >Submit Inquiry</a
-          >
+        <div class="service-card">
+          <i class="fa-solid fa-film service-icon"></i>
+          <h3>Film Photography</h3>
+          <p>Classic film photography for a timeless look and feel.</p>
         </div>
-      </section>
+        <div class="service-card">
+          <i class="fa-solid fa-file-image service-icon"></i>
+          <h3>Film Scanning</h3>
+          <p>
+            Professional film scanning services to digitize your memories.
+          </p>
+        </div>
+      </div>
+    </section>
+	<hr class="testimonial-separator" />
+<section>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-testimonial">
+          <blockquote class="blockquote">
+            <p>"Brandon and his wife Andrea did an amazing job at our wedding, capturing every moment perfectly and beautifully. Their service was definitely worth it and made our special night a memory we’ll never forget!"</p>
+            <footer class="blockquote-footer">Josh M.</footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="carousel-item">
+       <div class="carousel-testimonial">
+          <blockquote class="blockquote">
+            <p>"Brandon and his team made my son feel comfortable during his graduation photos and exceeded my expectations. The photos turned out great—I’ll definitely hire them again!"</p>
+            <footer class="blockquote-footer">Jessica L.</footer>
+          </blockquote>
+        </div>
+      </div>
+	  <div class="carousel-item">
+       <div class="carousel-testimonial">
+          <blockquote class="blockquote">
+            <p>"Booking Brandon and his wife was stress-free and easy! My wedding photos are amazing—I absolutely love how they turned out!"</p>
+            <footer class="blockquote-footer">Anjeanette A.</footer>
+          </blockquote>
+        </div>
+      </div>
+	  <div class="carousel-item">
+       <div class="carousel-testimonial">
+          <blockquote class="blockquote">
+            <p>"Brandon and his team were professional and approachable, capturing every detail my sister-in-law will want to remember in her wedding photos and videos. Highly recommend them!"</p>
+            <footer class="blockquote-footer">Cynthia V.</footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="carousel-item">
+       <div class="carousel-testimonial">
+          <blockquote class="blockquote">
+            <p>"Brandon exceeded expectations at my Sorority’s new member presentation, capturing every moment with genuine emotion and artistry. He was professional, attentive, and made the experience seamless and enjoyable. I’m already planning my next two events with him—highly recommend for anyone wanting exceptional photos!"</p>
+            <footer class="blockquote-footer">Bloondy C.</footer>
+          </blockquote>
+        </div>
+      </div>
     </div>
-
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<hr class="testimonial-separator" />
+    <section id="gallery" class="text-center">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="/images/cs-1.jpg" alt="Photo 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/cyn-1.jpg" alt="Photo 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/ej-3.jpg" alt="Photo 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/k-1.jpg" alt="Photo 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/kel-1.jpg" alt="Photo 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/da-3.jpg" alt="Photo 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/nev-2.jpg" alt="Photo 7" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/ric-1.jpg" alt="Photo 8" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/har-1.jpg" alt="Photo 9" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/ric-3.jpg" alt="Photo 10" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/g-1.jpg" alt="Photo 11" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/ej-4.jpg" alt="Photo 12" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/coop-1.jpg" alt="Photo 13" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/jd-1.jpg" alt="Photo 14" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/fj-1.jpg" alt="Photo 15" />
+        </div>
+      </div>
+    </section>
+    <div class="button-container">
+      <a
+        href="https://brandonhernandezphotography.hbportal.co/public/inquiry"
+        class="btn btn-dark"
+        >Submit Inquiry</a
+      >
+    </div>
+  </div>
 </Layout>
