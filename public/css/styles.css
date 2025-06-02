@@ -420,8 +420,9 @@ h6 {
 }
 .carousel-testimonial {
   max-width: 600px;
+ height: 240px;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
