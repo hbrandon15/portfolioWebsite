@@ -56,6 +56,17 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
       </section>
+	<section id="testimonials" class="section-padding text-center">
+  <h2>Testimonials</h2>
+  <div class="testimonials-container">
+    <div class="testimonial" id="testimonial-slide">
+      <p>"Brandon captured our wedding beautifully! Highly recommend."</p>
+      <span>- Jane D.</span>
+    </div>
+  </div>
+  <button class="testimonial-btn" id="prev-testimonial">&#8592; Prev</button>
+  <button class="testimonial-btn" id="next-testimonial">Next &#8594;</button>
+</section>
       <section id="gallery" class="text-center">
         <h2>Gallery</h2>
         <div class="gallery-container">
@@ -115,5 +126,40 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </section>
     </div>
+<script>
+  const testimonials = [
+    {
+      text: "Brandon captured our wedding beautifully! Highly recommend.",
+      author: "- Jane D."
+    },
+    {
+      text: "Professional, creative, and easy to work with.",
+      author: "- Mike S."
+    },
+    {
+      text: "Amazing photos and quick turnaround. Will book again!",
+      author: "- Sarah L."
+    }
+  ];
 
+  let current = 0;
+  const testimonialSlide = document.getElementById('testimonial-slide');
+  const prevBtn = document.getElementById('prev-testimonial');
+  const nextBtn = document.getElementById('next-testimonial');
+
+  function showTestimonial(idx) {
+    testimonialSlide.querySelector('p').textContent = `"${testimonials[idx].text}"`;
+    testimonialSlide.querySelector('span').textContent = testimonials[idx].author;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(current);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % testimonials.length;
+    showTestimonial(current);
+  });
+</script>
 </Layout>
