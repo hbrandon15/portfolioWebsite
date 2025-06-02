@@ -318,7 +318,7 @@ h6 {
   object-fit: cover;
   /* object-position: center center;   Default: center */
   /* object-position: top center;   // Focus top */
-  object-position: 50% 60%;      
+  object-position: 50% 60%;
   z-index: 1;
 }
 
@@ -340,6 +340,13 @@ h6 {
   bottom: 0;
   background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
   z-index: 1;
+}
+.hero-logo {
+  width: 100px; /* Adjust size as needed */
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .services-container {
   display: flex;
