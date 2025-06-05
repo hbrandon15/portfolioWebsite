@@ -60,6 +60,10 @@ h6 {
   font-weight: 400;
 }
 
+#about-me {
+	margin: 5px 350px; 
+}
+
 /* Navbar */
 .navbar {
   background-color: #000;
