@@ -64,6 +64,18 @@ h6 {
 	margin: 5px 350px; 
 }
 
+.fade-slide-header {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1s cubic-bezier(.77,0,.18,1) forwards;
+}
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Navbar */
 .navbar {
   background-color: #000;
