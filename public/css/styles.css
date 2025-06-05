@@ -61,13 +61,13 @@ h6 {
 }
 
 #about-me {
-	margin: 5px 350px; 
+  margin: 5px 350px;
 }
 
 .fade-slide-header {
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeSlideIn 1s cubic-bezier(.77,0,.18,1) forwards;
+  animation: fadeSlideIn 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 @keyframes fadeSlideIn {
   to {
@@ -146,12 +146,13 @@ h6 {
 }
 
 #description {
-  font-size: 20px;
-  margin: 5px 300px 0 300px;
-  padding: 150px;
+  margin: 2rem auto;
+  padding: 0;
+  max-width: 800px;
   text-transform: uppercase;
   font-weight: 400;
 }
+
 .description-black {
   color: #000;
 }
