@@ -76,6 +76,45 @@ h6 {
   }
 }
 
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.skills-group {
+  min-width: 220px;
+}
+.skills-group h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skills-list li {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.skills-list i {
+  font-size: 1.3em;
+  color: #007cf0;
+}
+@media (max-width: 700px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
 /* Navbar */
 .navbar {
   background-color: #000;
