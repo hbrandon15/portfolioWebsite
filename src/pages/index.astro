@@ -8,13 +8,12 @@ import Layout from '../layouts/Layout.astro';
 
 
 <section id="header" class="text-center">
-  <h1>Brandon Hernandez</h1>
+<h1 class="fade-slide-header">Brandon J. Hernandez</h1>
 </section>
 <div id="main-content" class="">
-  <section id="description" class="text-center">
-    <p>
-      A software engineer and creative storyteller, combining technical
-      expertise and a passion for visual art to bring ideas to life.
+  <section id="description" class="text-center ">
+    <p >
+      A software engineer and creative storyteller, combining technical expertise and a passion for visual art to bring ideas to life.
     </p>
   </section>
   <section id="about-me" class="text-left section-padding">
@@ -32,5 +31,34 @@ import Layout from '../layouts/Layout.astro';
       <a href="/about" class="body-links">Read more</a>
     </p>
   </section>
+ <section id="skills" class="section-padding text-center">
+  <h2>Skill Stack</h2>
+  <div class="skills-container">
+    <div class="skills-group">
+      <h3>Development</h3>
+      <ul class="skills-list">
+        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+		<li><i class="fa-brands fa-react"></i> React</li>
+		<li><i class="fa-brands fa-python"></i> Python</li>
+		<li><i class="fa-brands fa-microsoft"></i> C# / .NET</li>
+		<li><i class="fa-solid fa-database"></i> SQL Server</li>
+		<li><i class="fa-brands fa-git-alt"></i> Git</li>
+        
+      </ul>
+    </div>
+    <div class="skills-group">
+      <h3>Photo & Video</h3>
+      <ul class="skills-list">
+        <li><i class="fa-solid fa-camera"></i> Film & Mirrorless Cameras</li>
+        <li><i class="fa-solid fa-paintbrush"></i> Adobe Lightroom & Photoshop</li>
+		<li><i class="fa-solid fa-film"></i> DaVinci Resolve</li>
+		<li><i class="fa-solid fa-microphone"></i> Audio Recording & Editing</li>
+  		<li><i class="fa-solid fa-scissors"></i> Video Editing & Storytelling</li>
+		<li><i class="fa-solid fa-palette"></i> Color Grading</li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
 </div>
 </Layout>

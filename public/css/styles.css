@@ -60,6 +60,61 @@ h6 {
   font-weight: 400;
 }
 
+#about-me {
+  margin: 5px 350px;
+}
+
+.fade-slide-header {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.skills-group {
+  min-width: 220px;
+}
+.skills-group h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skills-list li {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.skills-list i {
+  font-size: 1.3em;
+  color: #007cf0;
+}
+@media (max-width: 700px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
 /* Navbar */
 .navbar {
   background-color: #000;
@@ -130,12 +185,13 @@ h6 {
 }
 
 #description {
-  font-size: 20px;
-  margin: 5px 300px 0 300px;
-  padding: 150px;
+  margin: 2rem auto;
+  padding: 0;
+  max-width: 800px;
   text-transform: uppercase;
   font-weight: 400;
 }
+
 .description-black {
   color: #000;
 }
