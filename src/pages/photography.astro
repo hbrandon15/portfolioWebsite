@@ -2,20 +2,31 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
-	<aside class="side-navbar">
+	<aside class="side-navbar" id="sideNavbar">
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Open navigation">
+    ☰
+  </button>
   <nav>
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#services">Services</a></li>
-	  <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#gallery">Gallery</a></li>
-	  <li><a href="#faq">FAQs</a></li>
+      <li><a href="#faq">FAQs</a></li>
       <li><a href="#instagram-highlights">Instagram</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </aside>
+
+<script>
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sideNavbar');
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+</script>
   <div id="main-content">
     <section id="hero" class="hero-section">
       <img src="/images/ric-2.jpg" alt="Sample Work" class="hero-bg" />
