@@ -33,7 +33,25 @@ import Footer from '../components/Footer.astro';
     </script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
+	<!-- Sidebar Toggle Script -->
+<script>
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sideNavbar');
+  const navLinks = sidebar.querySelectorAll('a');
 
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Only close on mobile (when sidebar is open)
+      if (window.innerWidth <= 900) {
+        sidebar.classList.remove('open');
+      }
+    });
+  });
+</script>
   </body>
 </html>
 
