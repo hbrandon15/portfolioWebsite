@@ -350,6 +350,45 @@ h6 {
 
 /* Photography Section */
 
+.side-navbar {
+  position: fixed;
+  top: 100px;
+  right: 32px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 1rem 1.5rem;
+  min-width: 140px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.side-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.side-navbar li {
+  margin-bottom: 1rem;
+}
+.side-navbar a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.side-navbar a:hover,
+.side-navbar a:focus {
+  color: #007bff;
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .side-navbar {
+    display: none;
+  }
+}
+
 #photography-introduction {
   margin: 40px auto;
   padding: 40px 20px;
