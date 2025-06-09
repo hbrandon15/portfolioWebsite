@@ -532,6 +532,16 @@ h6 {
   display: block;
   border-radius: 5px;
 }
+ /*Instagram Highlights Section */
+.ig-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.ig-post {
+  max-width: 340px;
+}
 
 /* Media Queries */
 
