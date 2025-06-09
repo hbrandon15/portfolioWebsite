@@ -440,7 +440,7 @@ h6 {
     min-width: 200px;
     padding-top: 2rem;
     background: #fff;
-    box-shadow: 0 0 0 9999px rgba(0,0,0,0.2);
+
     transition: right 0.3s;
     display: block;
   }
