@@ -52,6 +52,25 @@ import Footer from '../components/Footer.astro';
     });
   });
 </script>
+
+<!--Intersection Observer Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.section-fade');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Only animate once
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
   </body>
 </html>
 
