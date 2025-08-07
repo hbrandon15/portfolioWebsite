@@ -108,6 +108,18 @@ import Layout from "../layouts/Layout.astro";
               for cases, supporting comprehensive audit trails and accountability.
             </li>
             <li>
+              <strong>Audit Score Calculation:</strong> Each audit record now includes
+              a total score, automatically calculated based on responses to each
+              question.
+              <ul>
+                <li><strong>Scoring Rules:</strong></li>
+                <li>"Yes" = 1 point</li>
+                <li>"N/A" = 1 point</li>
+                <li>"No" = 0 points</li>
+              </ul>
+              The final score is the sum of all points across the questionnaire.
+            </li>
+            <li>
               <strong>Case Manager Administration:</strong> Manage case managers
               and their assignments efficiently.
             </li>
