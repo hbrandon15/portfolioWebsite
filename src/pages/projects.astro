@@ -22,135 +22,117 @@ import Layout from "../layouts/Layout.astro";
           </p>
           <p>🛠️ <strong>Tech Stack:</strong></p>
           <ul>
-            <li>Frontend: React, Vite, Axios, React Toastify</li>
-            <li>Backend: Node.js, Express, MongoDB, Mongoose</li>
-            <li>
-              Python: PyMongo, Requests, python-dotenv (for card price tracking)
-            </li>
-            <li>APIs: Scryfall (for card data and images)</li>
-            <li>
-              Deployment: Docker (containerized frontend and backend for easy
-              development and deployment)
-            </li>
+            <li>React, Vite, Axios, React Toastify</li>
+            <li>Node.js, Express, MongoDB, Mongoose</li>
+            <li>Python (PyMongo, Requests, python-dotenv)</li>
+            <li>Scryfall API</li>
+            <li>Docker</li>
           </ul>
           <p>📌 <strong>Features:</strong></p>
           <ul>
             <li>
-              Deck Management: Create, view, edit, and delete Commander decks.
+              <strong>Deck Management:</strong> Create, view, edit, and delete Commander
+              decks
             </li>
             <li>
-              Card Management: Add, remove, and clear cards from your decks.
+              <strong>Card Management:</strong> Add, remove, and clear cards from
+              decks
             </li>
             <li>
-              Card Images: Automatically fetches card images from Scryfall.
-            </li>
-            <li>Deck Analysis: View deck composition and statistics.</li>
-            <li>
-              Card Price Tracking: Python script fetches and updates card prices
-              from Scryfall.
+              <strong>Card Images:</strong> Automatically fetches card images from
+              Scryfall
             </li>
             <li>
-              User-Friendly UI: Modern interface with notifications and
-              confirmation dialogs.
+              <strong>Deck Analysis:</strong> View deck composition and statistics
             </li>
             <li>
-              REST API: Backend built with Node.js and Express, using MongoDB
-              for storage.
+              <strong>Price Tracking:</strong> Python script fetches and updates
+              card prices
             </li>
             <li>
-              Dockerized: Both frontend and backend are containerized for
-              consistent local development and streamlined deployment.
+              <strong>Modern UI:</strong> Notifications and confirmation dialogs
+            </li>
+            <li>
+              <strong>REST API:</strong> Backend built with Node.js and Express
+            </li>
+            <li>
+              <strong>Dockerized:</strong> Containerized for consistent development
+              and deployment
             </li>
           </ul>
-
           <a
             href="https://github.com/hbrandon15/CommanderDeckTuner"
             target="_blank"
             rel="noopener">View Repo</a
           >
         </div>
+
         <div class="project-card">
           <h2>Pretrial Audit System</h2>
           <h4>Nov. 2024 - Present</h4>
           <p><strong>Association:</strong> Harris County</p>
           <p><strong>Role:</strong> Lead Developer</p>
           <p>
-            The Pretrial Audit System is a secure, modern web application built
-            with C# and ASP.NET Core Razor Pages, designed to streamline and
-            enhance the case audit process for pretrial services. The system
-            enforces user authentication, ensuring that only authorized
-            personnel can access sensitive audit data and features. The
-            application is containerized with Docker for consistent development
-            and deployment environments.
+            A secure, modern web application built with C# and ASP.NET Core
+            Razor Pages, designed to streamline and enhance the case audit
+            process for pretrial services. The system enforces user
+            authentication and is containerized with Docker.
           </p>
           <p>🛠️ <strong>Tech Stack:</strong></p>
           <ul>
             <li>.NET 8 / ASP.NET Core Razor Pages</li>
             <li>C# 12</li>
-            <li>Entity Framework Core (with SQL Server)</li>
-            <li>Bootstrap 5 (for responsive UI)</li>
+            <li>Entity Framework Core (SQL Server)</li>
+            <li>Bootstrap 5</li>
             <li>Cookie Authentication</li>
             <li>Docker</li>
           </ul>
           <p>📌 <strong>Features:</strong></p>
           <ul>
             <li>
-              <strong>Secure Authentication:</strong> All pages and features are
-              protected by robust authentication. Only registered users can access
-              the system, and user sessions are managed securely.
+              <strong>Secure Authentication:</strong> Robust user authentication
+              and session management
             </li>
             <li>
-              <strong>Case Management:</strong> Easily view, create, and manage cases
-              through intuitive interfaces.
+              <strong>Case Management:</strong> View, create, and manage cases through
+              intuitive interfaces
             </li>
             <li>
-              <strong>Audit Records:</strong> Track, review, and create audit records
-              for cases, supporting comprehensive audit trails and accountability.
+              <strong>Audit Records:</strong> Track and create audit records with
+              comprehensive trails
             </li>
             <li>
-              <strong>Audit Score Calculation:</strong> Each audit record includes
-              a total score, automatically calculated based on responses to each
-              question.
-              <ul>
-                <li><strong>Scoring Rules:</strong></li>
-                <li>"Yes" = 1 point</li>
-                <li>"N/A" = 1 point</li>
-                <li>"No" = 0 points</li>
-              </ul>
-              The final score is the sum of all points across the questionnaire.
+              <strong>Score Calculation:</strong> Automatic scoring based on audit
+              responses (Yes=1, N/A=1, No=0)
             </li>
             <li>
-              <strong>Audit Details & Reporting:</strong> View detailed audit information
-              with question-by-question responses and export audit records to CSV
-              for analysis and reporting.
+              <strong>Reporting:</strong> Detailed audit information and CSV export
+              capabilities
             </li>
             <li>
-              <strong>Case Manager Administration:</strong> Manage case managers
-              and their assignments efficiently.
+              <strong>Case Manager Admin:</strong> Manage case managers and their
+              assignments
             </li>
             <li>
-              <strong>User-Friendly Interface:</strong> Clean, responsive design
-              using Bootstrap for a seamless experience across devices.
+              <strong>Responsive Design:</strong> Bootstrap-powered interface for
+              all devices
             </li>
             <li>
-              <strong>Dockerized Deployment:</strong> The system can be easily run
-              and deployed in isolated containers for consistency across environments.
+              <strong>Dockerized Deployment:</strong> Containerized for consistent
+              environments
             </li>
           </ul>
         </div>
+
         <div class="project-card">
           <h2>Personal Portfolio & Photography Website</h2>
           <h4>Feb. 2025 - Present</h4>
-          <p>
-            <strong>Association:</strong> Personal Project / Photography Business
-          </p>
+          <p><strong>Association:</strong> Personal Project</p>
           <p><strong>Role:</strong> Designer & Developer</p>
           <p>
             A personal and professional portfolio website built with Astro,
             featuring responsive design, custom components, and automated
-            deployment to GitHub Pages with support for a custom domain. This
-            site showcases both my software development work and my photography
-            business.
+            deployment to GitHub Pages with custom domain support.
           </p>
           <p>🛠️ <strong>Tech Stack:</strong></p>
           <ul>
@@ -163,14 +145,28 @@ import Layout from "../layouts/Layout.astro";
           </ul>
           <p>📌 <strong>Features:</strong></p>
           <ul>
-            <li>Built with Astro for fast, modern static site generation</li>
-            <li>Responsive design and custom layouts</li>
-            <li>Automated deployment via GitHub Actions</li>
-            <li>Supports custom domains (e.g., bhdz.dev)</li>
             <li>
-              Showcases both professional projects and photography business
+              <strong>Static Site Generation:</strong> Built with Astro for fast
+              performance
             </li>
-            <li>Easy to update and maintain</li>
+            <li>
+              <strong>Responsive Design:</strong> Custom layouts that work on all
+              devices
+            </li>
+            <li>
+              <strong>Automated Deployment:</strong> GitHub Actions for continuous
+              deployment
+            </li>
+            <li>
+              <strong>Custom Domain:</strong> Supports custom domains (bhdz.dev)
+            </li>
+            <li>
+              <strong>Dual Purpose:</strong> Showcases both development work and
+              photography business
+            </li>
+            <li>
+              <strong>Easy Maintenance:</strong> Simple to update and maintain
+            </li>
           </ul>
           <a href="https://bhdz.dev/" target="_blank" rel="noopener"
             >Visit Site</a
@@ -181,80 +177,92 @@ import Layout from "../layouts/Layout.astro";
             rel="noopener">View Repo</a
           >
         </div>
+
         <div class="project-card">
           <h2>Justice Center Navigator</h2>
           <h4>Jan. 2023 - May 2023</h4>
           <p>
             <strong>Association:</strong> Harris County, University of Houston-Clear
-            Lake: Capstone Project
+            Lake
           </p>
           <p><strong>Role:</strong> Lead Developer</p>
           <p>
             A touchscreen kiosk application built to assist defendants and
             guests in navigating the Criminal Justice Center in Houston, TX.
-            This project was developed as a graduate school capstone to provide
-            accessible and real-time information to courthouse visitors.
+            Developed as a graduate school capstone project.
           </p>
           <p>🛠️ <strong>Tech Stack:</strong></p>
           <ul>
-            <li>Hardware: Raspberry Pi 4 + 7” Touchscreen Display</li>
-            <li>Frontend: Web-based (HTML, CSS, JavaScript, Node.js)</li>
-            <li>Backend: Cloud-hosted database (MongoDB)</li>
-            <li>Networking: Wi-Fi enabled for cloud communication</li>
+            <li>Raspberry Pi 4 + 7" Touchscreen Display</li>
+            <li>HTML, CSS, JavaScript, Node.js</li>
+            <li>MongoDB (Cloud-hosted)</li>
+            <li>Wi-Fi networking</li>
           </ul>
           <p>📌 <strong>Features:</strong></p>
           <ul>
             <li>
-              🏛️ <strong>Building Information:</strong> Displays location and department
-              details within the Criminal Justice Center.
+              <strong>Building Information:</strong> Location and department details
+              display
             </li>
             <li>
-              ⚖️ <strong>Court Listings:</strong> Provides current court schedules
-              and assignments.
+              <strong>Court Listings:</strong> Current court schedules and assignments
             </li>
             <li>
-              🔍 <strong>Defendant Docket Lookup:</strong> Allows users to search
-              for docket information using a user-friendly interface.
+              <strong>Docket Lookup:</strong> Search functionality for defendant
+              information
             </li>
             <li>
-              ☁️ <strong>Cloud Integration:</strong> Connects to a remote database
-              to fetch and display real-time docket data.
+              <strong>Cloud Integration:</strong> Real-time data from remote database
+            </li>
+            <li>
+              <strong>Touch Interface:</strong> User-friendly touchscreen navigation
             </li>
           </ul>
-
           <a
             href="https://github.com/hbrandon15/criminal-justice-kiosk"
             target="_blank"
             rel="noopener">View Repo</a
           >
         </div>
+
         <div class="project-card">
           <h2>Hands-free Drone Tracking & Recognition</h2>
           <h4>Aug. 2019 - May 2020</h4>
-          <p>
-            <strong>Association:</strong> University of Houston-Clear Lake: Senior
-            Project
-          </p>
-
+          <p><strong>Association:</strong> University of Houston-Clear Lake</p>
           <p><strong>Role:</strong> Project Manager</p>
           <p>
             Developed a voice-controlled drone system that integrates real-time
             face tracking to enhance autonomous flight capabilities. The drone
-            responds to voice commands for launching and landing, while its
-            onboard camera detects and follows human faces. As Project Manager,
-            I led the team to meet project deadlines, facilitated effective
-            communication, resolved conflicts, and contributed to the
-            development of Python modules for system integration.
+            responds to voice commands for launching and landing while tracking
+            human faces.
           </p>
           <p>🛠️ <strong>Tech Stack:</strong></p>
           <ul>
             <li>Python</li>
-            <li>ROS</li>
+            <li>ROS (Robot Operating System)</li>
             <li>OpenCV</li>
             <li>Google Voice API</li>
             <li>Linux</li>
           </ul>
-          <!-- <a href="#">View Project</a> -->
+          <p>📌 <strong>Features:</strong></p>
+          <ul>
+            <li>
+              <strong>Voice Control:</strong> Voice commands for launch and landing
+            </li>
+            <li>
+              <strong>Face Tracking:</strong> Real-time face detection and following
+            </li>
+            <li>
+              <strong>Autonomous Flight:</strong> Enhanced flight capabilities with
+              tracking
+            </li>
+            <li>
+              <strong>Computer Vision:</strong> OpenCV integration for visual processing
+            </li>
+            <li>
+              <strong>Project Management:</strong> Led team communication and development
+            </li>
+          </ul>
         </div>
       </div>
     </section>
