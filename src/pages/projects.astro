@@ -28,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
             <li>Scryfall API</li>
             <li>Docker</li>
           </ul>
-          <p>📌 <strong>Features:</strong></p>
+          <p> <strong>Features:</strong></p>
           <ul>
             <li>
               <strong>Deck Management:</strong> Create, view, edit, and delete Commander
@@ -67,62 +67,37 @@ import Layout from "../layouts/Layout.astro";
           >
         </div>
 
-        <div class="project-card">
-          <h2>Pretrial Audit System</h2>
-          <h4>Nov. 2024 - Present</h4>
+        <div class="project-card" role="article" aria-labelledby="cams-title">
+          <h2 id="cams-title">Case Audit Management System (CAMS)</h2>
+          <h4><time datetime="2024-11">Nov 2024</time> — Present</h4>
           <p><strong>Association:</strong> Harris County</p>
           <p><strong>Role:</strong> Lead Developer</p>
           <p>
-            A secure, modern web application built with C# and ASP.NET Core
-            Razor Pages, designed to streamline and enhance the case audit
-            process for pretrial services. The system enforces Windows Single
-            Sign-On (SSO) authentication for seamless and secure domain-based
-            access.
+            Published web application hosted on a standalone device via IIS with a
+            SQL Server backend. Currently in pre-release validation prior to user
+            rollout. Enforces Windows Single Sign\-On and streamlines case and audit
+            workflows with automated scoring and reporting.
           </p>
-          <p>🛠️ <strong>Tech Stack:</strong></p>
+
+          <p><strong>Tech stack:</strong></p>
           <ul>
-            <li>.NET 8 / ASP.NET Core Razor Pages</li>
-            <li>C# 12</li>
-            <li>Entity Framework Core (SQL Server)</li>
+            <li>.NET 8 / ASP\.NET Core Razor Pages</li>
+            <li>C# 12, Entity Framework Core (SQL Server)</li>
             <li>Bootstrap 5</li>
-            <li>Windows Authentication (Negotiate/NTLM/Kerberos)</li>
+            <li>Windows Authentication (Negotiate / NTLM / Kerberos)</li>
+            <li>Deployed on IIS (dedicated host)</li>
           </ul>
-          <p>📌 <strong>Features:</strong></p>
+
+          <p><strong>Key features:</strong></p>
           <ul>
-            <li>
-              <strong>Windows Single Sign-On:</strong> Integrated Windows authentication
-              using existing domain credentials
-            </li>
-            <li>
-              <strong>Case Management:</strong> View, create, and manage cases through
-              intuitive interfaces
-            </li>
-            <li>
-              <strong>Audit Records:</strong> Track and create audit records with
-              comprehensive trails and accountability
-            </li>
-            <li>
-              <strong>Audit Score Calculation:</strong> Automatic scoring based on
-              questionnaire responses (Yes=1, N/A=1, No=0)
-            </li>
-            <li>
-              <strong>Comprehensive Reporting:</strong> Generate insightful reports
-              to support data-driven decision-making
-            </li>
-            <li>
-              <strong>Case Manager Administration:</strong> Manage case managers
-              and their assignments efficiently
-            </li>
-            <li>
-              <strong>Automated Workflows:</strong> Routine tasks automated to reduce
-              manual effort and minimize errors
-            </li>
-            <li>
-              <strong>Personalized Navigation:</strong> Users see their Windows username
-              displayed for clear identification
-            </li>
+            <li>Windows SSO with existing domain credentials</li>
+            <li>Case and audit record management with full trails</li>
+            <li>Automated audit scoring and exportable reports (CSV/PDF)</li>
+            <li>Admin tools for case manager administration and automated workflows</li>
+            <li>Staging and pre\-release validation on the IIS host</li>
           </ul>
         </div>
+
 
         <div class="project-card">
           <h2>Personal Portfolio & Photography Website</h2>
@@ -143,7 +118,7 @@ import Layout from "../layouts/Layout.astro";
             <li>GitHub Actions</li>
             <li>GitHub Pages</li>
           </ul>
-          <p>📌 <strong>Features:</strong></p>
+          <p> <strong>Features:</strong></p>
           <ul>
             <li>
               <strong>Static Site Generation:</strong> Built with Astro for fast
@@ -198,7 +173,7 @@ import Layout from "../layouts/Layout.astro";
             <li>MongoDB (Cloud-hosted)</li>
             <li>Wi-Fi networking</li>
           </ul>
-          <p>📌 <strong>Features:</strong></p>
+          <p> <strong>Features:</strong></p>
           <ul>
             <li>
               <strong>Building Information:</strong> Location and department details
@@ -244,7 +219,7 @@ import Layout from "../layouts/Layout.astro";
             <li>Google Voice API</li>
             <li>Linux</li>
           </ul>
-          <p>📌 <strong>Features:</strong></p>
+          <p><strong>Features:</strong></p>
           <ul>
             <li>
               <strong>Voice Control:</strong> Voice commands for launch and landing
