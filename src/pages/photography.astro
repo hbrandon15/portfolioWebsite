@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
+// Load all images files from assets that match certain extensions
 const imageModules = import.meta.glob("../assets/*.{jpg,jpeg,png,webp,avif}", {
   eager: true,
   import: "default",
@@ -21,6 +22,7 @@ const getAsset = (fileName: string) => {
 
 const heroBackground = getAsset("ric-2.jpg");
 
+// Define gallery image metadata and map each filename to an Astro image source
 const galleryImages = [
   { fileName: "cs-1.jpg", alt: "Photo 1" },
   { fileName: "cyn-1.jpg", alt: "Photo 2" },
