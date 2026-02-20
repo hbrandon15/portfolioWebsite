@@ -1,5 +1,57 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+// 1) Load all matching files from src/assets at build time.
+//    Each entry value is Astro ImageMetadata (used by <Image src={...} />).
+const imageModules = import.meta.glob<ImageMetadata>(
+  "../assets/*.{jpg,jpeg,png,webp,avif}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
+
+// 2) Helper: convert a filename (e.g. "cs-1.jpg") into its loaded asset metadata.
+const getAsset = (fileName: string): ImageMetadata => {
+  const asset = Object.entries(imageModules).find(([filePath]) =>
+    filePath.endsWith(`/${fileName}`),
+  )?.[1];
+
+  if (!asset) {
+    throw new Error(`Missing image asset: ${fileName}`);
+  }
+
+  return asset;
+};
+
+const heroBackground = getAsset("ric-2.jpg");
+
+// 3) Define gallery data using filenames + alt text, then map to actual image sources.
+const galleryImages = [
+  { fileName: "cs-1.jpg", alt: "Photo 1" },
+  { fileName: "cyn-1.jpg", alt: "Photo 2" },
+  { fileName: "ej-6.jpg", alt: "Photo 3" },
+  { fileName: "k-1.jpg", alt: "Photo 4" },
+  { fileName: "kel-1.jpg", alt: "Photo 5" },
+  { fileName: "hou-1.jpg", alt: "Photo 19" },
+  { fileName: "hw-1.jpg", alt: "Photo 16" },
+  { fileName: "nev-2.jpg", alt: "Photo 7" },
+  { fileName: "ric-1.jpg", alt: "Photo 8" },
+  { fileName: "har-1.jpg", alt: "Photo 9" },
+  { fileName: "ej-4.jpg", alt: "Photo 12" },
+  { fileName: "coop-1.jpg", alt: "Photo 13" },
+  { fileName: "jd-1.jpg", alt: "Photo 14" },
+  { fileName: "fj-1.jpg", alt: "Photo 15" },
+  { fileName: "hw-2.jpg", alt: "Photo 17" },
+  { fileName: "bike.jpg", alt: "Photo 18" },
+  { fileName: "lh-1.jpg", alt: "Photo 20" },
+  { fileName: "cyn-2.jpg", alt: "Photo 21" },
+].map(({ fileName, alt }) => ({
+  src: getAsset(fileName),
+  alt,
+}));
 ---
 
 <Layout>
@@ -27,7 +79,7 @@ import Layout from "../layouts/Layout.astro";
 
   <div id="main-content">
     <section id="hero" class="hero-section">
-      <img src="/images/ric-2.jpg" alt="Sample Work" class="hero-bg" />
+      <Image src={heroBackground} alt="Sample Work" class="hero-bg" />
       <div class="hero-overlay">
         <img
           src="/images/BHP WHITE LOGO 2.png"
@@ -173,46 +225,14 @@ import Layout from "../layouts/Layout.astro";
     <section id="gallery" class="text-center section-fade">
       <h2>Gallery</h2>
       <div class="gallery-container">
-        <div class="gallery-item">
-          <!-- Row 1 -->
-          <img src="/images/cs-1.jpg" alt="Photo 1" />
-        </div>
-        <div class="gallery-item">
-          <img src="/images/cyn-1.jpg" alt="Photo 2" />
-        </div>
-        <div class="gallery-item">
-          <img src="/images/ej-6.jpg" alt="Photo 3" />
-        </div>
-        <!-- Row 2 -->
-        <div class="gallery-item">
-          <img src="/images/k-1.jpg" alt="Photo 4" />
-        </div>
-        <div class="gallery-item">
-          <img src="/images/kel-1.jpg" alt="Photo 5" />
-        </div>
-        <div class="gallery-item">
-          <img src="/images/nev-2.jpg" alt="Photo 7" />
-        </div>
-        <!-- Row 3 -->
-        <div class="gallery-item">
-          <img src="/images/ric-1.jpg" alt="Photo 8" />
-        </div>
-        <div class="gallery-item">
-          <img src="/images/har-1.jpg" alt="Photo 9" />
-        </div>
-        <div class="gallery-item">
-          <img src="/images/ej-4.jpg" alt="Photo 12" />
-        </div>
-        <!-- Row 4 -->
-        <div class="gallery-item">
-          <img src="/images/coop-1.jpg" alt="Photo 13" />
-        </div>
-        <div class="gallery-item">
-          <img src="/images/jd-1.jpg" alt="Photo 14" />
-        </div>
-        <div class="gallery-item">
-          <img src="/images/fj-1.jpg" alt="Photo 15" />
-        </div>
+        {
+          // Render each photo with Astro's image component
+          galleryImages.map((photo) => (
+            <div class="gallery-item">
+              <Image src={photo.src} alt={photo.alt} loading="lazy" />
+            </div>
+          ))
+        }
       </div>
     </section>
     <!-- End of Gallery -->
@@ -365,7 +385,8 @@ import Layout from "../layouts/Layout.astro";
                           ></path></g
                         ></g
                       ></g
-                    ></svg>
+                    ></svg
+                  >
                 </div><div style="padding-top: 8px;">
                   <div
                     style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"
@@ -431,7 +452,8 @@ import Layout from "../layouts/Layout.astro";
                 <a
                   href="https://www.instagram.com/p/C8pgeYWRHwh/?utm_source=ig_embed&utm_campaign=loading"
                   style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-                  target="_blank">A post shared by brandon. (@brnhndz)</a>
+                  target="_blank">A post shared by brandon. (@brnhndz)</a
+                >
               </p>
             </div>
           </blockquote>
@@ -496,7 +518,8 @@ import Layout from "../layouts/Layout.astro";
                           ></path></g
                         ></g
                       ></g
-                    ></svg>
+                    ></svg
+                  >
                 </div><div style="padding-top: 8px;">
                   <div
                     style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"
@@ -562,7 +585,8 @@ import Layout from "../layouts/Layout.astro";
                 <a
                   href="https://www.instagram.com/p/DJW1gZit9Dz/?utm_source=ig_embed&utm_campaign=loading"
                   style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-                  target="_blank">A post shared by brandon. (@brnhndz)</a>
+                  target="_blank">A post shared by brandon. (@brnhndz)</a
+                >
               </p>
             </div>
           </blockquote>
@@ -627,7 +651,8 @@ import Layout from "../layouts/Layout.astro";
                           ></path></g
                         ></g
                       ></g
-                    ></svg>
+                    ></svg
+                  >
                 </div><div style="padding-top: 8px;">
                   <div
                     style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"
@@ -693,7 +718,8 @@ import Layout from "../layouts/Layout.astro";
                 <a
                   href="https://www.instagram.com/p/C_x-yn2xZo2/?utm_source=ig_embed&utm_campaign=loading"
                   style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-                  target="_blank">A post shared by brandon. (@brnhndz)</a>
+                  target="_blank">A post shared by brandon. (@brnhndz)</a
+                >
               </p>
             </div>
           </blockquote>

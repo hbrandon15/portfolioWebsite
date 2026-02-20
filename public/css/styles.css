@@ -185,7 +185,9 @@ h6 {
 .section-fade {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.4,0,.2,1);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-fade.visible {
@@ -367,9 +369,9 @@ h6 {
   top: 100px;
   right: 32px;
   z-index: 1000;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   padding: 1rem 1.5rem;
   min-width: 140px;
   font-size: 1rem;
@@ -391,7 +393,7 @@ h6 {
   width: 56px;
   height: 56px;
   font-size: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 .side-navbar ul {
@@ -417,9 +419,9 @@ h6 {
   top: 100px;
   right: 32px;
   z-index: 1000;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   padding: 1rem 1.5rem;
   min-width: 140px;
   font-size: 1rem;
@@ -441,7 +443,7 @@ h6 {
   width: 56px;
   height: 56px;
   font-size: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 @media (max-width: 900px) {
@@ -593,7 +595,9 @@ h6 {
   border: 1px solid #333; /* Match the border color of service cards */
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   text-transform: uppercase;
 }
 
@@ -649,7 +653,7 @@ h6 {
   display: block;
   border-radius: 5px;
 }
- /*Instagram Highlights Section */
+/*Instagram Highlights Section */
 .ig-highlights {
   display: flex;
   flex-wrap: wrap;
@@ -670,7 +674,7 @@ h6 {
 .pricing-card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   padding: 2rem 1.5rem;
   min-width: 220px;
   max-width: 300px;
@@ -722,7 +726,11 @@ h6 {
   /* Styles for mobile devices */
 
   #description,
-  #photography-introduction,
+  #photography-introduction {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
   #about-me {
     margin: 5px 20px;
     padding: 10px;
@@ -737,7 +745,11 @@ h6 {
 @media (min-width: 768px) and (max-width: 1023px) {
   /* Styles for tablets */
   #description,
-  #photography-introduction,
+  #photography-introduction {
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+
   #about-me {
     margin: 5px 100px;
     padding: 50px;
@@ -754,8 +766,8 @@ h6 {
 
   #photography-introduction,
   #description {
-    margin: 5px 10px;
-    padding: 100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
   }
 }
 
