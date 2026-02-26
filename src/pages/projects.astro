@@ -9,74 +9,41 @@ import Layout from "../layouts/Layout.astro";
     </section>
     <section id="projects" class="text-center">
       <div class="projects-container">
-        <div class="project-card">
-          <h2>MTG: Commander Deck Tuner</h2>
-          <h4>April 2025 - Present</h4>
+        <div class="project-card" role="article" aria-labelledby="virtual-isp">
+          <h2 id="virtual-isp-title">Virtual ISP</h2>
+          <h4><time datetime="2026-02">Feb 2026</time> — Present</h4>
           <p><strong>Association:</strong> Personal Project</p>
-          <p><strong>Role:</strong> Lead Developer</p>
           <p>
-            Commander Deck Tuner is a full-stack web application designed to
-            help Magic: The Gathering players optimize, manage, and analyze
-            their Commander (EDH) decks. The app provides deck statistics, card
-            suggestions, and easy deck editing features.
+            A from-scratch Image Signal Processing pipeline built in Python and
+            NumPy — no OpenCV — processing RAW sensor data (.DNG / .ARW) through
+            the core stages of a real imaging pipeline. Each stage is
+            implemented manually to build genuine understanding of what happens
+            between photons and pixels. Pipeline stages in development:
+            Demosaicing (Bayer RGGB to full RGB), White Balance, and Gamma
+            Correction, with additional stages planned. Built using my own RAW
+            photography files as real-world test inputs, combining my background
+            as a professional photographer with a deepening foundation in image
+            science and signal processing.
           </p>
-          <p>🛠️ <strong>Tech Stack:</strong></p>
+          <p><strong>Tech stack:</strong></p>
           <ul>
-            <li>React, Vite, Axios, React Toastify</li>
-            <li>Node.js, Express, MongoDB, Mongoose</li>
-            <li>Python (PyMongo, Requests, python-dotenv)</li>
-            <li>Scryfall API</li>
-            <li>Docker</li>
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>RawPy</li>
           </ul>
-          <p> <strong>Features:</strong></p>
-          <ul>
-            <li>
-              <strong>Deck Management:</strong> Create, view, edit, and delete Commander
-              decks
-            </li>
-            <li>
-              <strong>Card Management:</strong> Add, remove, and clear cards from
-              decks
-            </li>
-            <li>
-              <strong>Card Images:</strong> Automatically fetches card images from
-              Scryfall
-            </li>
-            <li>
-              <strong>Deck Analysis:</strong> View deck composition and statistics
-            </li>
-            <li>
-              <strong>Price Tracking:</strong> Python script fetches and updates
-              card prices
-            </li>
-            <li>
-              <strong>Modern UI:</strong> Notifications and confirmation dialogs
-            </li>
-            <li>
-              <strong>REST API:</strong> Backend built with Node.js and Express
-            </li>
-            <li>
-              <strong>Dockerized:</strong> Containerized for consistent development
-              and deployment
-            </li>
-          </ul>
-          <a
-            href="https://github.com/hbrandon15/CommanderDeckTuner"
-            target="_blank"
-            rel="noopener">View Repo</a
-          >
         </div>
-
         <div class="project-card" role="article" aria-labelledby="cams-title">
           <h2 id="cams-title">Case Audit Management System (CAMS)</h2>
           <h4><time datetime="2024-11">Nov 2024</time> — Present</h4>
           <p><strong>Association:</strong> Harris County</p>
           <p><strong>Role:</strong> Lead Developer</p>
           <p>
-            Published web application hosted on a standalone device via IIS with a
-            SQL Server backend. Currently in pre-release validation prior to user
-            rollout. Enforces Windows Single Sign\-On and streamlines case and audit
-            workflows with automated scoring and reporting.
+            Lead developer of a mission-critical full-stack web application for
+            Harris County, automating case audit workflows with secure Windows
+            SSO authentication, automated scoring, and exportable reporting
+            dashboards. Built with .NET 8, C#, and SQL Server. Currently in
+            pre-release validation on a dedicated IIS host prior to user
+            rollout.
           </p>
 
           <p><strong>Tech stack:</strong></p>
@@ -87,17 +54,7 @@ import Layout from "../layouts/Layout.astro";
             <li>Windows Authentication (Negotiate / NTLM / Kerberos)</li>
             <li>Deployed on IIS (dedicated host)</li>
           </ul>
-
-          <p><strong>Key features:</strong></p>
-          <ul>
-            <li>Windows SSO with existing domain credentials</li>
-            <li>Case and audit record management with full trails</li>
-            <li>Automated audit scoring and exportable reports (CSV/PDF)</li>
-            <li>Admin tools for case manager administration and automated workflows</li>
-            <li>Staging and pre\-release validation on the IIS host</li>
-          </ul>
         </div>
-
 
         <div class="project-card">
           <h2>Personal Portfolio & Photography Website</h2>
@@ -105,138 +62,16 @@ import Layout from "../layouts/Layout.astro";
           <p><strong>Association:</strong> Personal Project</p>
           <p><strong>Role:</strong> Designer & Developer</p>
           <p>
-            A personal and professional portfolio website built with Astro,
-            featuring responsive design, custom components, and automated
-            deployment to GitHub Pages with custom domain support.
+            Personal portfolio showcasing my software engineering and imaging
+            work. Built with Astro and deployed via GitHub Actions to a custom
+            domain.
           </p>
-          <p>🛠️ <strong>Tech Stack:</strong></p>
+          <p><strong>Tech Stack:</strong></p>
           <ul>
             <li>Astro</li>
             <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>HTML/CSS</li>
             <li>GitHub Actions</li>
-            <li>GitHub Pages</li>
-          </ul>
-          <p> <strong>Features:</strong></p>
-          <ul>
-            <li>
-              <strong>Static Site Generation:</strong> Built with Astro for fast
-              performance
-            </li>
-            <li>
-              <strong>Responsive Design:</strong> Custom layouts that work on all
-              devices
-            </li>
-            <li>
-              <strong>Automated Deployment:</strong> GitHub Actions for continuous
-              deployment
-            </li>
-            <li>
-              <strong>Custom Domain:</strong> Supports custom domains (bhdz.dev)
-            </li>
-            <li>
-              <strong>Dual Purpose:</strong> Showcases both development work and
-              photography business
-            </li>
-            <li>
-              <strong>Easy Maintenance:</strong> Simple to update and maintain
-            </li>
-          </ul>
-          <a href="https://bhdz.dev/" target="_blank" rel="noopener"
-            >Visit Site</a
-          >
-          <a
-            href="https://github.com/hbrandon15/portfolioWebsite"
-            target="_blank"
-            rel="noopener">View Repo</a
-          >
-        </div>
-
-        <div class="project-card">
-          <h2>Justice Center Navigator</h2>
-          <h4>Jan. 2023 - May 2023</h4>
-          <p>
-            <strong>Association:</strong> Harris County, University of Houston-Clear
-            Lake
-          </p>
-          <p><strong>Role:</strong> Lead Developer</p>
-          <p>
-            A touchscreen kiosk application built to assist defendants and
-            guests in navigating the Criminal Justice Center in Houston, TX.
-            Developed as a graduate school capstone project.
-          </p>
-          <p>🛠️ <strong>Tech Stack:</strong></p>
-          <ul>
-            <li>Raspberry Pi 4 + 7" Touchscreen Display</li>
-            <li>HTML, CSS, JavaScript, Node.js</li>
-            <li>MongoDB (Cloud-hosted)</li>
-            <li>Wi-Fi networking</li>
-          </ul>
-          <p> <strong>Features:</strong></p>
-          <ul>
-            <li>
-              <strong>Building Information:</strong> Location and department details
-              display
-            </li>
-            <li>
-              <strong>Court Listings:</strong> Current court schedules and assignments
-            </li>
-            <li>
-              <strong>Docket Lookup:</strong> Search functionality for defendant
-              information
-            </li>
-            <li>
-              <strong>Cloud Integration:</strong> Real-time data from remote database
-            </li>
-            <li>
-              <strong>Touch Interface:</strong> User-friendly touchscreen navigation
-            </li>
-          </ul>
-          <a
-            href="https://github.com/hbrandon15/criminal-justice-kiosk"
-            target="_blank"
-            rel="noopener">View Repo</a
-          >
-        </div>
-
-        <div class="project-card">
-          <h2>Hands-free Drone Tracking & Recognition</h2>
-          <h4>Aug. 2019 - May 2020</h4>
-          <p><strong>Association:</strong> University of Houston-Clear Lake</p>
-          <p><strong>Role:</strong> Project Manager</p>
-          <p>
-            Developed a voice-controlled drone system that integrates real-time
-            face tracking to enhance autonomous flight capabilities. The drone
-            responds to voice commands for launching and landing while tracking
-            human faces.
-          </p>
-          <p>🛠️ <strong>Tech Stack:</strong></p>
-          <ul>
-            <li>Python</li>
-            <li>ROS (Robot Operating System)</li>
-            <li>OpenCV</li>
-            <li>Google Voice API</li>
-            <li>Linux</li>
-          </ul>
-          <p><strong>Features:</strong></p>
-          <ul>
-            <li>
-              <strong>Voice Control:</strong> Voice commands for launch and landing
-            </li>
-            <li>
-              <strong>Face Tracking:</strong> Real-time face detection and following
-            </li>
-            <li>
-              <strong>Autonomous Flight:</strong> Enhanced flight capabilities with
-              tracking
-            </li>
-            <li>
-              <strong>Computer Vision:</strong> OpenCV integration for visual processing
-            </li>
-            <li>
-              <strong>Project Management:</strong> Led team communication and development
-            </li>
           </ul>
         </div>
       </div>
