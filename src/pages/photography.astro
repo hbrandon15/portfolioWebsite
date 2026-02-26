@@ -79,7 +79,13 @@ const galleryImages = [
 
   <div id="main-content">
     <section id="hero" class="hero-section">
-      <Image src={heroBackground} alt="Sample Work" class="hero-bg" />
+      <Image
+        src={heroBackground}
+        alt="Sample Work"
+        class="hero-bg"
+        fetchpriority="high"
+        loading="eager"
+      />
       <div class="hero-overlay">
         <img
           src="/images/BHP WHITE LOGO 2.png"
@@ -231,7 +237,7 @@ const galleryImages = [
           // Render each photo with Astro's image component
           galleryImages.map((photo) => (
             <div class="gallery-item">
-              <Image src={photo.src} alt={photo.alt} loading="lazy" />
+              <Image src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
             </div>
           ))
         }
