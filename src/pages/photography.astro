@@ -98,6 +98,8 @@ const galleryImages = [
         unique story, whether through professional photography or videography.
         From intimate events to grand celebrations or simple photoshoots, he is
         here to bring your vision to life and preserve those precious moments.
+        His background in computer engineering and image science brings a
+        technical precision to every color decision and every frame he captures.
       </p>
     </section>
     <section id="services" class="section-padding text-center section-fade">
@@ -723,7 +725,29 @@ const galleryImages = [
           </blockquote>
         </div>
       </div>
-      <script async src="//www.instagram.com/embed.js"></script>
+      <script>
+        (function () {
+          const igSection = document.getElementById("instagram-highlights");
+          if (!igSection) return;
+          let loaded = false;
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting && !loaded) {
+                  loaded = true;
+                  observer.unobserve(entry.target);
+                  const script = document.createElement("script");
+                  script.async = true;
+                  script.src = "https://www.instagram.com/embed.js";
+                  document.body.appendChild(script);
+                }
+              });
+            },
+            { rootMargin: "200px" },
+          );
+          observer.observe(igSection);
+        })();
+      </script>
     </section>
     <!-- End of Instagram Feed -->
 

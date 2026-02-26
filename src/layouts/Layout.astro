@@ -51,20 +51,23 @@ import Footer from "../components/Footer.astro";
     <script>
       const toggle = document.getElementById("sidebarToggle");
       const sidebar = document.getElementById("sideNavbar");
-      const navLinks = sidebar.querySelectorAll("a");
 
-      toggle.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-      });
+      if (toggle && sidebar) {
+        const navLinks = sidebar.querySelectorAll("a");
 
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          // Only close on mobile (when sidebar is open)
-          if (window.innerWidth <= 900) {
-            sidebar.classList.remove("open");
-          }
+        toggle.addEventListener("click", () => {
+          sidebar.classList.toggle("open");
         });
-      });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            // Only close on mobile (when sidebar is open)
+            if (window.innerWidth <= 900) {
+              sidebar.classList.remove("open");
+            }
+          });
+        });
+      }
     </script>
 
     <!--Intersection Observer Script -->
