@@ -68,7 +68,8 @@ h6 {
 }
 
 #about-me {
-  margin: 5px 350px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .fade-slide-header {
@@ -369,6 +370,69 @@ h6 {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Index Hero */
+.hero-overlay h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Explore Section */
+.explore-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  min-width: 160px;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.explore-card:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+  color: #222;
+  text-decoration: none;
+}
+
+.explore-card i {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.explore-card h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.explore-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
 /* Photography Section */
 
 .side-navbar {
@@ -508,6 +572,10 @@ h6 {
   /* object-position: top center;   // Focus top */
   object-position: 50% 41%;
   z-index: 1;
+}
+
+#hero .hero-bg {
+  object-position: 50% 70%;
 }
 
 .hero-overlay {
@@ -739,8 +807,21 @@ h6 {
   }
 
   #about-me {
-    margin: 5px 20px;
-    padding: 10px;
+    padding: 40px 20px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .explore-cards {
+    flex-direction: column;
+    align-items: center;
   }
 
   #header h1 {
@@ -758,7 +839,6 @@ h6 {
   }
 
   #about-me {
-    margin: 5px 100px;
     padding: 50px;
   }
 

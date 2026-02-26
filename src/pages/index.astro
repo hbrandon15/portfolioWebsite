@@ -1,35 +1,66 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+const imageModules = import.meta.glob<ImageMetadata>(
+  "../assets/*.{jpg,jpeg,png,webp,avif}",
+  { eager: true, import: "default" },
+);
+
+const getAsset = (fileName: string): ImageMetadata => {
+  const asset = Object.entries(imageModules).find(([filePath]) =>
+    filePath.endsWith(`/${fileName}`),
+  )?.[1];
+  if (!asset) throw new Error(`Missing image asset: ${fileName}`);
+  return asset;
+};
+
+const heroBackground = getAsset("hw-2.jpg");
 ---
 
 <Layout>
-  <section id="header" class="text-center">
-    <h1 class="fade-slide-header">Brandon J. Hernandez</h1>
-  </section>
-  <div id="main-content" class="">
-    <section id="description" class="text-center">
-      <p>
-        Computer Engineer specializing in Image Quality, ISP, & Computational
-        Photography.
+  <section id="hero" class="hero-section">
+    <Image
+      src={heroBackground}
+      alt="Brandon Hernandez Portfolio"
+      class="hero-bg"
+    />
+    <div class="hero-overlay">
+      <h1 class="fade-slide-header">Brandon J. Hernandez</h1>
+      <p class="hero-subtitle">
+        Computer Engineer &middot; Image Quality &middot; ISP &middot;
+        Computational Photography
       </p>
+    </div>
+  </section>
+
+  <div id="main-content">
+    <section id="description" class="text-center section-fade">
       <h3>
         Bridging the gap between high-performance software engineering and the
         science of visual excellence.
       </h3>
     </section>
-    <section id="about-me" class="text-left section-padding">
+
+    <section id="about-me" class="text-left section-padding section-fade">
       <h2>
         Hello there, <br />
         meet Brandon.
       </h2>
       <p>
-        I came to imaging science from two directions. One as a Computer Engineer who needed to understand light, and the other as a professional photographer who needed to understand signals. Today I work at that intersection, combining engineering discipline with a practitioner's eye to build and evaluate systems that see the world clearly.
+        I came to imaging science from two directions. One as a Computer
+        Engineer who needed to understand light, and the other as a professional
+        photographer who needed to understand signals. Today I work at that
+        intersection, combining engineering discipline with a practitioner's eye
+        to build and evaluate systems that see the world clearly.
       </p>
       <p>
         <a href="/about" class="body-links">Read more</a>
       </p>
     </section>
-    <section id="skills" class="section-padding text-center">
+
+    <section id="skills" class="section-padding text-center section-fade">
       <h2>Skill Stack</h2>
       <div class="skills-container">
         <div class="skills-group">
@@ -63,6 +94,27 @@ import Layout from "../layouts/Layout.astro";
             <li><i class="fa-solid fa-plug"></i> REST APIs & Agile</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section id="explore" class="text-center section-fade section-padding">
+      <h2>Explore My Work</h2>
+      <div class="explore-cards">
+        <a href="/projects" class="explore-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Projects</h3>
+          <p>Engineering & imaging work</p>
+        </a>
+        <a href="/photography" class="explore-card">
+          <i class="fa-solid fa-camera-retro"></i>
+          <h3>Photography</h3>
+          <p>Freelance photography services</p>
+        </a>
+        <a href="/about" class="explore-card">
+          <i class="fa-solid fa-user"></i>
+          <h3>About</h3>
+          <p>Background & experience</p>
+        </a>
       </div>
     </section>
   </div>
