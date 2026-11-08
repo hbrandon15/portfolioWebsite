@@ -63,6 +63,10 @@ To use a custom domain, add a `CNAME` file in the `public/` folder with your dom
 - [Astro Documentation](https://docs.astro.build)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
 
+## 🔄 Deployment status
+
+This repo is configured to deploy via GitHub Actions to GitHub Pages.
+
 ---
 
 **Made with Astro 🚀 by Brandon Hernandez**
