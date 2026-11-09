@@ -85,6 +85,10 @@ const galleryImages = [
         class="hero-bg"
         fetchpriority="high"
         loading="eager"
+        widths={[640, 1024, 1600, 2400]}
+        sizes="100vw"
+        quality="75"
+        width={2400}
       />
       <div class="hero-overlay">
         <img
@@ -237,7 +241,16 @@ const galleryImages = [
           // Render each photo with Astro's image component
           galleryImages.map((photo) => (
             <div class="gallery-item">
-              <Image src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                decoding="async"
+                widths={[400, 800, 1200]}
+                sizes="33vw"
+                quality="75"
+                width={1200}
+              />
             </div>
           ))
         }
@@ -251,8 +264,8 @@ const galleryImages = [
         <div class="faq-item">
           <h5>How do I book a session?</h5>
           <p>
-            Simply use the "Submit Inquiry" button at the bottom or contact me directly
-            via email or Instagram.
+            Simply use the "Submit Inquiry" button at the bottom or contact me
+            directly via email or Instagram.
           </p>
         </div>
         <div class="faq-item">
