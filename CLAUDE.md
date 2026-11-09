@@ -19,7 +19,13 @@ Commands: `npm run dev` (local server), `npm run build`, `npm run preview`.
 ## Roadmap
 
 Improvement work is tracked as GitHub issues **#102–#127** (labels: performance, accessibility, seo, ux, feature, cleanup).
-Check status with `gh issue list`. Suggested order: #102 (responsive images) first, since it accounts for most of the load time.
+Check status with `gh issue list`. #102 (responsive images) is done. Current focus: #103, the move to Tailwind.
+
+**Styling decision (Nov 2026):** the site is moving from Bootstrap (CDN) + `public/css/styles.css` to **Tailwind CSS** via the official Astro integration. Brandon chose it for its open-source templates and component libraries. Rebuild the current look first, page by page, and refine the design later. New styling should use Tailwind classes, not new rules in `styles.css`.
+
+**Where we left off:** branch `ux/103-tailwind`, Stage 1, step 1: Brandon runs `npx astro add tailwind`, then Claude guides importing `src/styles/global.css` in `Layout.astro`. Tick the #103 checklist as stages finish.
+
+**Design and content advice:** since the whole look is being rebuilt, Brandon wants Claude to act as a design and content advisor too, not just a code reviewer. When planning each page, bring suggestions based on what strong current portfolios do (engineering and photography): layout and typography, new pages or sections worth adding (e.g. case studies, a dedicated contact page, a photography client/booking flow), and missing information. Research current examples when useful, recommend one direction, and turn agreed ideas into GitHub issues. Brandon still writes the code.
 
 ### PR grouping
 
@@ -29,12 +35,13 @@ Planned groups (update as issues close):
 
 | PR | Issues | Why grouped |
 |---|---|---|
-| Responsive images | #102 | Own PR (home hero already shipped in #130) |
+| Responsive images | #102 | Done (#130, #132) |
+| Tailwind migration | #103, #62 | Header refactor happens as part of the rebuild. Big, so it ships in stages (setup + layout, pages, cleanup), one PR per stage |
 | Housekeeping | #126, #106, #111, #78, #79 | Unused files, logo, right-click removal, footer year and footer links: all small edits to Layout/Footer/assets |
 | SEO basics | #116, #117, #118 | All `<head>` tags in `Layout.astro`; sitemap needs the `site` URL from #116 |
 | Small a11y fixes | #113, #114 | Reduced motion CSS + alt text, both small |
 | Engineering contact | #122, #123 | Resume link and contact options, same pages |
-| Own PR each | #103, #104, #105, #107, #108, #109, #110, #112, #115, #119, #120, #121, #124, #125, #127 | Bigger, or likely to change how the site looks |
+| Own PR each | #104, #105, #107, #108, #109, #110, #112, #115, #119, #120, #121, #124, #125, #127 | Bigger, or likely to change how the site looks |
 
 ## How we work: Brandon codes, Claude coaches
 
