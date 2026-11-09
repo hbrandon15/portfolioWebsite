@@ -21,13 +21,28 @@ Commands: `npm run dev` (local server), `npm run build`, `npm run preview`.
 Improvement work is tracked as GitHub issues **#102–#127** (labels: performance, accessibility, seo, ux, feature, cleanup).
 Check status with `gh issue list`. Suggested order: #102 (responsive images) first, since it accounts for most of the load time.
 
+### PR grouping
+
+Default is **one issue = one branch = one PR**, with all of that issue's steps in the same PR (`Closes #N`). Exception: small, related housekeeping issues that touch the same files can share one branch and PR (`Closes #A, closes #B`). Larger or visually risky changes always get their own PR.
+
+Planned groups (update as issues close):
+
+| PR | Issues | Why grouped |
+|---|---|---|
+| Responsive images | #102 | Own PR (home hero already shipped in #130) |
+| Housekeeping | #126, #106, #111, #78, #79 | Unused files, logo, right-click removal, footer year and footer links: all small edits to Layout/Footer/assets |
+| SEO basics | #116, #117, #118 | All `<head>` tags in `Layout.astro`; sitemap needs the `site` URL from #116 |
+| Small a11y fixes | #113, #114 | Reduced motion CSS + alt text, both small |
+| Engineering contact | #122, #123 | Resume link and contact options, same pages |
+| Own PR each | #103, #104, #105, #107, #108, #109, #110, #112, #115, #119, #120, #121, #124, #125, #127 | Bigger, or likely to change how the site looks |
+
 ## How we work: Brandon codes, Claude coaches
 
 Brandon wants to learn by writing the code himself. Claude's role is **guide and reviewer**, not author.
 
 For each issue:
 
-1. **Pick one issue.** Work on one issue at a time and never mix issues in a branch.
+1. **Pick one issue** (or one planned group from the PR grouping table). Don't mix unrelated issues in a branch.
 2. **Branch off an up-to-date `main`.** Never commit to `main` directly. When starting an issue, **Claude creates the branch and switches to it automatically** (don't ask Brandon to run these). If there are uncommitted changes, ask before switching.
    ```
    git checkout main && git pull
