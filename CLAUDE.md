@@ -28,7 +28,7 @@ Brandon wants to learn by writing the code himself. Claude's role is **guide and
 For each issue:
 
 1. **Pick one issue.** Work on one issue at a time and never mix issues in a branch.
-2. **Branch off an up-to-date `main`.** Never commit to `main` directly.
+2. **Branch off an up-to-date `main`.** Never commit to `main` directly. When starting an issue, **Claude creates the branch and switches to it automatically** (don't ask Brandon to run these). If there are uncommitted changes, ask before switching.
    ```
    git checkout main && git pull
    git checkout -b <type>/<issue#>-<short-slug>
