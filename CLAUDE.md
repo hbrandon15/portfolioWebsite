@@ -45,7 +45,7 @@ Planned groups (update as issues close):
 | SEO basics | #116, #117, #118 | All `<head>` tags in `Layout.astro`; sitemap needs the `site` URL from #116 |
 | Small a11y fixes | #113, #114 | Reduced motion CSS + alt text, both small |
 | Resume | #122 | Own PR (#123 closed as not needed) |
-| Own PR each | #104, #105, #107, #108, #109, #110, #112, #115, #119, #120, #121, #124, #125, #127 | Bigger, or likely to change how the site looks |
+| Own PR each | #104, #105, #107, #108, #109, #110, #112, #115, #119, #120, #121, #124, #125, #127, #133, #134 | Bigger, or likely to change how the site looks |
 
 ## How we work: Brandon codes, Claude coaches
 
