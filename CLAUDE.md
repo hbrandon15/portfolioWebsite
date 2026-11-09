@@ -9,6 +9,10 @@ Personal portfolio for Brandon Hernandez at **https://bhdz.dev**. It's a hybrid 
 - **Engineering**: employers and clients (Home, About, Projects)
 - **Photography**: people booking shoots in Houston, TX (Photography page)
 
+**Positioning:** Brandon is embracing the rare combination of **imaging engineer + working photographer** as his edge. Design and content should present it as one identity (understanding images from sensor to final photo), not as two separate sites. The Virtual ISP project, built on his own RAW photos, is the clearest bridge between the two.
+
+Photography inquiries go through an **external, paid inquiry form** (linked from the Photography page). Link to it; don't rebuild it. Engineering inquiries come through LinkedIn; no engineering contact form is needed.
+
 Stack: Astro 5 (static), plain CSS in `public/css/styles.css`, images in `src/assets/` rendered with `astro:assets`.
 
 Deploy: every push to `main` runs `.github/workflows/deploy.yml` and publishes to GitHub Pages.
@@ -40,7 +44,7 @@ Planned groups (update as issues close):
 | Housekeeping | #126, #106, #111, #78, #79 | Unused files, logo, right-click removal, footer year and footer links: all small edits to Layout/Footer/assets |
 | SEO basics | #116, #117, #118 | All `<head>` tags in `Layout.astro`; sitemap needs the `site` URL from #116 |
 | Small a11y fixes | #113, #114 | Reduced motion CSS + alt text, both small |
-| Engineering contact | #122, #123 | Resume link and contact options, same pages |
+| Resume | #122 | Own PR (#123 closed as not needed) |
 | Own PR each | #104, #105, #107, #108, #109, #110, #112, #115, #119, #120, #121, #124, #125, #127 | Bigger, or likely to change how the site looks |
 
 ## How we work: Brandon codes, Claude coaches
