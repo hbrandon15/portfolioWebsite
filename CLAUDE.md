@@ -27,7 +27,9 @@ Check status with `gh issue list`. #102 (responsive images) is done. Current foc
 
 **Styling decision (Nov 2026):** the site is moving from Bootstrap (CDN) + `public/css/styles.css` to **Tailwind CSS** via the official Astro integration. Brandon chose it for its open-source templates and component libraries. Rebuild the current look first, page by page, and refine the design later. New styling should use Tailwind classes, not new rules in `styles.css`.
 
-**Where we left off:** branch `ux/103-tailwind`, Stage 1, step 1: Brandon runs `npx astro add tailwind`, then Claude guides importing `src/styles/global.css` in `Layout.astro`. Tick the #103 checklist as stages finish.
+**Where we left off:** branch `ux/103-tailwind`, Stage 1. Done: Tailwind installed and imported in `Layout.astro`, Bootstrap removed, `src/components/Button.astro` (variants dark/light/outline, sizes md/lg) used for the 3 Photography buttons. Next: theme tokens in `src/styles/global.css` (Claude proposed a font and color direction for Brandon to approve), then rebuild Header (#62) and Footer. Tick the #103 checklist as stages finish.
+
+**Windows/OneDrive note:** the project sits in OneDrive. If `npm install` fails with `EPERM` (exit code 4294963248 / -4048), OneDrive has turned `node_modules` files into cloud placeholders. Fix: delete `node_modules` and run `npm install`. Moving the repo out of OneDrive (e.g. `C:\dev`) prevents it.
 
 **Design and content advice:** since the whole look is being rebuilt, Brandon wants Claude to act as a design and content advisor too, not just a code reviewer. When planning each page, bring suggestions based on what strong current portfolios do (engineering and photography): layout and typography, new pages or sections worth adding (e.g. case studies, a dedicated contact page, a photography client/booking flow), and missing information. Research current examples when useful, recommend one direction, and turn agreed ideas into GitHub issues. Brandon still writes the code.
 

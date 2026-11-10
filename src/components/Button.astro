@@ -1,0 +1,31 @@
+---
+interface Props {
+  href: string;
+  variant?: "dark" | "light" | "outline";
+  size?: "md" | "lg";
+  [key: string]: any; // allows extra attributes like target and rel
+}
+
+const { href, variant = "dark", size = "md", ...rest } = Astro.props;
+
+// Shared by every button
+const base =
+  "inline-flex items-center justify-center gap-2 rounded-md font-medium no-underline transition-colors " +
+  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current";
+
+const variants = {
+  dark: "bg-neutral-900 text-white hover:bg-neutral-700",
+  light: "bg-white text-neutral-900 hover:bg-neutral-200",
+  outline:
+    "border border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white",
+};
+
+const sizes = {
+  md: "px-4 py-2 text-base",
+  lg: "px-6 py-3 text-lg",
+};
+---
+
+<a href={href} class:list={[base, variants[variant], sizes[size]]} {...rest}>
+  <slot />
+</a>
